@@ -34,11 +34,11 @@
     <nodes xmi:type="eer:Attribute" xmi:id="_uv5ucNO1EeuQSPTnk0DOog" name="CONTA" AttributeLinkTarget="_wYBi0NO1EeuQSPTnk0DOog"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_hKxgENO2EeuQSPTnk0DOog" name="Valor do pagamento" AttributeLinkTarget="_l_4N0NO2EeuQSPTnk0DOog"/>
     <nodes xmi:type="eer:AssociativeEntity" xmi:id="_jrty0NO2EeuQSPTnk0DOog" name="COMPRA" relationshipLink="_zH92sNO8EeujgNVFqCZx9A">
-      <contains xmi:type="eer:Relationship" xmi:id="_4wdNYNO1EeuQSPTnk0DOog" name="COMPRA" AttributeLinkSource="_l_4N0NO2EeuQSPTnk0DOog" isIdentifier="true" relationshipLink="_6DW_sNO1EeuQSPTnk0DOog _6kMb4NO1EeuQSPTnk0DOog"/>
+      <contains xmi:type="eer:Relationship" xmi:id="_4wdNYNO1EeuQSPTnk0DOog" name="COMPRA" AttributeLinkSource="_l_4N0NO2EeuQSPTnk0DOog" relationshipLink="_6DW_sNO1EeuQSPTnk0DOog _6kMb4NO1EeuQSPTnk0DOog"/>
     </nodes>
     <nodes xmi:type="eer:Relationship" xmi:id="_4Rnf0NO2EeuQSPTnk0DOog" name="CADASTRA OBRA DE ARTE" relationshipLink="_8KNiANO2EeuQSPTnk0DOog _89pKENO2EeuQSPTnk0DOog"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_gvXhANO3EeuQSPTnk0DOog" name="CADASTRA RELÍQUIA" relationshipLink="_mvoaUNO3EeuQSPTnk0DOog _nLa-cNO3EeuQSPTnk0DOog"/>
-    <nodes xmi:type="eer:Relationship" xmi:id="__AFRANO4EeuQSPTnk0DOog" name="Produz" relationshipLink="_ARmjQNO5EeuQSPTnk0DOog _ApVt0NO5EeuQSPTnk0DOog"/>
+    <nodes xmi:type="eer:Relationship" xmi:id="__AFRANO4EeuQSPTnk0DOog" name="Produz" isIdentifier="true" relationshipLink="_ARmjQNO5EeuQSPTnk0DOog _ApVt0NO5EeuQSPTnk0DOog"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_YOT0ANO5EeuQSPTnk0DOog" name="Expõe obra de arte" AttributeLinkSource="_sHWbANO5EeuQSPTnk0DOog" relationshipLink="_a6AlQNO5EeuQSPTnk0DOog _bSn5kNO5EeuQSPTnk0DOog"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_lTfhkNO5EeuQSPTnk0DOog" name="Número do protocolo de confirmação" type="DISCRIMINATOR" AttributeLinkTarget="_sHWbANO5EeuQSPTnk0DOog"/>
     <nodes xmi:type="eer:Relationship" xmi:id="_BEoGMNO6EeuQSPTnk0DOog" name="Supervisiona" relationshipLink="_DE8_MNO6EeuQSPTnk0DOog _DyVCkNO6EeuQSPTnk0DOog"/>
@@ -56,11 +56,11 @@
     <nodes xmi:type="eer:Attribute" xmi:id="_m8p68NO9EeujgNVFqCZx9A" name="Dia" AttributeLinkTarget="_yDlMENO9EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_ovdVUNO9EeujgNVFqCZx9A" name="Mês" AttributeLinkTarget="_y_mIYNO9EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_pxpyINO9EeujgNVFqCZx9A" name="Ano" AttributeLinkTarget="_zumjcNO9EeujgNVFqCZx9A"/>
-    <nodes xmi:type="eer:Attribute" xmi:id="_38Sr4NO9EeujgNVFqCZx9A" name="Identificador" type="IDENTIFIER" AttributeLinkTarget="_BniCINO-EeujgNVFqCZx9A"/>
+    <nodes xmi:type="eer:Attribute" xmi:id="_38Sr4NO9EeujgNVFqCZx9A" name="Identificador da relíquia" type="IDENTIFIER" AttributeLinkTarget="_BniCINO-EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_8_FQUNO9EeujgNVFqCZx9A" name="Nome" AttributeLinkTarget="_CAVjsNO-EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_97vs4NO9EeujgNVFqCZx9A" name="Categoria" AttributeLinkTarget="_CbVdoNO-EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="__lVg4NO9EeujgNVFqCZx9A" name="Idade Estimada" AttributeLinkTarget="_CzDaENO-EeujgNVFqCZx9A"/>
-    <nodes xmi:type="eer:Attribute" xmi:id="_D-G38NO-EeujgNVFqCZx9A" name="Identificador" type="IDENTIFIER" AttributeLinkTarget="_TdLOANO-EeujgNVFqCZx9A"/>
+    <nodes xmi:type="eer:Attribute" xmi:id="_D-G38NO-EeujgNVFqCZx9A" name="Identificador da Exposição" type="IDENTIFIER" AttributeLinkTarget="_TdLOANO-EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_EqVr0NO-EeujgNVFqCZx9A" name="Data e hora" AttributeLinkSource="_LFOEkNO-EeujgNVFqCZx9A _L33pgNO-EeujgNVFqCZx9A _MMqNwNO-EeujgNVFqCZx9A _NWlDMNO-EeujgNVFqCZx9A" AttributeLinkTarget="_Lkc-QNO-EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_GhdlgNO-EeujgNVFqCZx9A" name="Dia" AttributeLinkTarget="_LFOEkNO-EeujgNVFqCZx9A"/>
     <nodes xmi:type="eer:Attribute" xmi:id="_HDVjgNO-EeujgNVFqCZx9A" name="Mês" AttributeLinkTarget="_L33pgNO-EeujgNVFqCZx9A"/>
@@ -99,13 +99,13 @@
     <links xmi:type="eer:AttributeLink" xmi:id="_wYBi0NO1EeuQSPTnk0DOog" source="_lh_0cNO1EeuQSPTnk0DOog" target="_uv5ucNO1EeuQSPTnk0DOog"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_wyKhINO1EeuQSPTnk0DOog" source="_lh_0cNO1EeuQSPTnk0DOog" target="_t2s1kNO1EeuQSPTnk0DOog"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_6DW_sNO1EeuQSPTnk0DOog" source="_4_E_kNOyEeuQSPTnk0DOog" target="_4wdNYNO1EeuQSPTnk0DOog"/>
-    <links xmi:type="eer:RelationshipLink" xmi:id="_6kMb4NO1EeuQSPTnk0DOog" source="_3GJvENOyEeuQSPTnk0DOog" target="_4wdNYNO1EeuQSPTnk0DOog" participation="TOTAL" cardinality="MANY" isIdentifier="true"/>
+    <links xmi:type="eer:RelationshipLink" xmi:id="_6kMb4NO1EeuQSPTnk0DOog" source="_3GJvENOyEeuQSPTnk0DOog" target="_4wdNYNO1EeuQSPTnk0DOog" cardinality="MANY"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_l_4N0NO2EeuQSPTnk0DOog" source="_4wdNYNO1EeuQSPTnk0DOog" target="_hKxgENO2EeuQSPTnk0DOog"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_8KNiANO2EeuQSPTnk0DOog" source="__BCiB9OyEeuQSPTnk0DOog" target="_4Rnf0NO2EeuQSPTnk0DOog"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_89pKENO2EeuQSPTnk0DOog" source="_3GJvENOyEeuQSPTnk0DOog" target="_4Rnf0NO2EeuQSPTnk0DOog" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_mvoaUNO3EeuQSPTnk0DOog" source="__BCiB9OyEeuQSPTnk0DOog" target="_gvXhANO3EeuQSPTnk0DOog"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_nLa-cNO3EeuQSPTnk0DOog" source="_QExIxtOzEeuQSPTnk0DOog" target="_gvXhANO3EeuQSPTnk0DOog" participation="TOTAL" cardinality="MANY"/>
-    <links xmi:type="eer:RelationshipLink" xmi:id="_ARmjQNO5EeuQSPTnk0DOog" source="_3GJvENOyEeuQSPTnk0DOog" target="__AFRANO4EeuQSPTnk0DOog" participation="TOTAL" cardinality="MANY"/>
+    <links xmi:type="eer:RelationshipLink" xmi:id="_ARmjQNO5EeuQSPTnk0DOog" source="_3GJvENOyEeuQSPTnk0DOog" target="__AFRANO4EeuQSPTnk0DOog" participation="TOTAL" cardinality="MANY" isIdentifier="true"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_ApVt0NO5EeuQSPTnk0DOog" source="_8zhhl9OyEeuQSPTnk0DOog" target="__AFRANO4EeuQSPTnk0DOog" participation="TOTAL"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_a6AlQNO5EeuQSPTnk0DOog" source="_N01th9OzEeuQSPTnk0DOog" target="_YOT0ANO5EeuQSPTnk0DOog" participation="TOTAL" cardinality="MANY"/>
     <links xmi:type="eer:RelationshipLink" xmi:id="_bSn5kNO5EeuQSPTnk0DOog" source="_3GJvENOyEeuQSPTnk0DOog" target="_YOT0ANO5EeuQSPTnk0DOog" cardinality="MANY"/>
@@ -1218,11 +1218,6 @@
       <styles xmi:type="notation:RoutingStyle" xmi:id="_nIgwMdO-EeujgNVFqCZx9A"/>
       <styles xmi:type="notation:FontStyle" xmi:id="_nIgwMtO-EeujgNVFqCZx9A" fontName="Segoe UI"/>
       <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_nIgwM9O-EeujgNVFqCZx9A" points="[20, 20, -100, -82]$[75, 101, -45, -1]"/>
-    </edges>
-    <edges xmi:type="notation:Edge" xmi:id="_vvsBYNO-EeujgNVFqCZx9A" type="4007" element="_vvraUNO-EeujgNVFqCZx9A" source="_uCT5kNO-EeujgNVFqCZx9A" target="__BCiAdOyEeuQSPTnk0DOog">
-      <styles xmi:type="notation:RoutingStyle" xmi:id="_vvsBYdO-EeujgNVFqCZx9A"/>
-      <styles xmi:type="notation:FontStyle" xmi:id="_vvsBYtO-EeujgNVFqCZx9A" fontName="Segoe UI"/>
-      <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_vvsBY9O-EeujgNVFqCZx9A" points="[9, 9, -56, -46]$[33, 49, -32, -6]"/>
     </edges>
   </notation:Diagram>
 </xmi:XMI>
