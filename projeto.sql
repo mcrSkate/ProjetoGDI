@@ -72,7 +72,7 @@ CREATE TABLE visitante(
 CREATE TABLE comprador(
     comprador_cpf VARCHAR2(15),
     conta NUMBER NOT NULL,
-    CONSTRAINT comprador_pk PRIMARY KEY(cpf),
+    CONSTRAINT comprador_pk PRIMARY KEY(comprador_cpf),
     CONSTRAINT comprador_cpf_pessoa_cpf_fk FOREIGN KEY (comprador_cpf) REFERENCES pessoa(pessoa_cpf)
 );
 
@@ -123,13 +123,13 @@ CREATE TABLE compra(
 CREATE TABLE pagamento(
     cargo VARCHAR(15),
     salario NUMBER NOT NULL,
-    CONSTRAINT pagamento_pk PRIMARY KEY (cargo),
+    CONSTRAINT pagamento_pk PRIMARY KEY (cargo)
 );
 
 CREATE TABLE banco_do_comprador(
     conta NUMBER,
     agencia NUMBER NOT NULL,
-    CONSTRAINT banco_do_comprador_pk PRIMARY KEY (conta),
+    CONSTRAINT banco_do_comprador_pk PRIMARY KEY (conta)
 );
 
 CREATE TABLE comunicacao_pessoa(
@@ -153,6 +153,6 @@ CREATE TABLE contrata(
     identificador_seguro INTEGER,
     CONSTRAINT contrata_pk PRIMARY KEY (comprador_cpf, identificador_obra_de_arte, identificador_seguro),
     CONSTRAINT comprador_cpf_fk FOREIGN KEY (comprador_cpf) REFERENCES comprador(comprador_cpf),
-    CONSTRAINT identificador_obra_de_arte_fk FOREIGN (identificador_obra_de_arte) KEY REFERENCES obra_de_arte (identificador_obra_de_arte),
+    CONSTRAINT identificador_obra_de_arte_fk FOREIGN KEY(identificador_obra_de_arte) REFERENCES obra_de_arte (identificador_obra_de_arte),
     CONSTRAINT identificador_seguro_fk FOREIGN KEY (identificador_seguro) REFERENCES seguro (identificador_seguro)
 );
