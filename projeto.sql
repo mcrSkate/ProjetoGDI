@@ -18,7 +18,7 @@ CREATE TABLE reliquia(
     CONSTRAINT reliquia_pk PRIMARY KEY (identificador_reliquia)
 );
 
-CREATE TABLE Seguro(
+CREATE TABLE seguro(
     identificador_seguro INTEGER,
     identificador_obra_de_arte INTEGER NOT NULL,
     comprador_cpf VARCHAR2(15) NOT NULL,
@@ -123,7 +123,8 @@ CREATE TABLE compra(
 CREATE TABLE pagamento(
     cargo VARCHAR(15),
     salario NUMBER NOT NULL,
-    CONSTRAINT pagamento_pk PRIMARY KEY (cargo)
+    CONSTRAINT pagamento_pk PRIMARY KEY (cargo),
+    CONSTRAINT salario_ck CHECK (salario >= 1100.00)
 );
 
 CREATE TABLE banco_do_comprador(
