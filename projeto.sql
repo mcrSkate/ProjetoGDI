@@ -151,8 +151,8 @@ CREATE TABLE contrata(
     comprador_cpf VARCHAR2(15),
     identificador_obra_de_arte INTEGER,
     identificador_seguro INTEGER,
-    CONSTRAINT contrata_pk PRIMARY KEY (comprador_cpf, identificador_obra_de_arte, identificador_seguro)
-    CONSTRAINT comprador_cpf_fk FOREIGN KEY (comprador_cpf) REFERENCES comprador(comprador_cpf)
-    CONSTRAINT identificador_obra_de_arte_fk FOREIGN (identificador_obra_de_arte) KEY REFERENCES obra_de_arte (identificador_obra_de_arte)
+    CONSTRAINT contrata_pk PRIMARY KEY (comprador_cpf, identificador_obra_de_arte, identificador_seguro),
+    CONSTRAINT comprador_cpf_fk FOREIGN KEY (comprador_cpf) REFERENCES comprador(comprador_cpf),
+    CONSTRAINT identificador_obra_de_arte_fk FOREIGN (identificador_obra_de_arte) KEY REFERENCES obra_de_arte (identificador_obra_de_arte),
     CONSTRAINT identificador_seguro_fk FOREIGN KEY (identificador_seguro) REFERENCES seguro (identificador_seguro)
 );
