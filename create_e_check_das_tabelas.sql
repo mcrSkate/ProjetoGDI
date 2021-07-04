@@ -92,7 +92,7 @@ CREATE TABLE visitante(
 
 CREATE TABLE comprador(
     comprador_cpf VARCHAR(15),
-    conta NUMERIC NOT NULL,
+    conta VARCHAR(12) NOT NULL,
     CONSTRAINT comprador_pk PRIMARY KEY(comprador_cpf),
     CONSTRAINT comprador_cpf_pessoa_cpf_fk FOREIGN KEY (comprador_cpf) REFERENCES pessoa(pessoa_cpf)
 );
@@ -241,6 +241,56 @@ INSERT INTO pessoa VALUES ('321.565.194-71', 'Tomás C Correia', '31/3/1973', 'A
 
 
 
+INSERT INTO pessoa VALUES ('785.214.448-76','Carlito Teves','04/09/1981','Avenida José Castro','44','Caruaru');
+
+INSERT INTO pessoa VALUES ('902.345.278-38', 'Susana de Cássia','06/03/1972', 'Rua das Laranjeiras', '91', 'Palmares');
+
+INSERT INTO pessoa VALUES ('183.989.570-50', 'Ágatha F Azevedo','03/10/1970', 'Rua Acapulco ', '1971', 'Palmares');
+
+INSERT INTO pessoa VALUES ('201.811.925-78', 'Marina A Gomes','09/04/1969', 'Rua Dom Severino Vieira de Melo', '1234', 'Caruaru');
+
+INSERT INTO pessoa VALUES ('454.187.783-92', ' Marcos Júnior Silva','05/09/1975', 'Rua do Centro', '87', 'Recife');
+
+INSERT INTO pessoa VALUES ('201.111.904-67', 'Carlos Justos','07/12/2002', 'Travessa da Quinta Avenida', '01', 'Carne de Vaca');
+
+INSERT INTO pessoa VALUES ('292.957.379-11', 'Manuela P Lima','05/12/1957', 'Rua Ibicuí', '558', 'Caruaru');
+
+INSERT INTO pessoa VALUES ('277.543.780-89', 'Ruana Martins','09/11/1977', 'Rua do Limoeiro', '23', 'João Pessoa');
+
+INSERT INTO pessoa VALUES ('551.999.793-45', 'Otávio C Pinto','03/02/1957', 'Rua Jornalista Nelson Pereira de Lima', '1411', 'Recife');
+
+INSERT INTO pessoa VALUES('989.445.235-96','Marco Polo','31/05/2006','Fazenda Haroldo Feitosa','112','Petrolina');
+
+INSERT INTO pessoa VALUES ('102.300.573-45', 'Cássio Monteiro','29/06/1997', 'Rua João Pessoa', '83', 'Caruaru');
+
+INSERT INTO pessoa VALUES ('102.312.573-00', 'Luiza Castro','02/08/2000', 'Rua Principal 1', '789', 'Caruaru');
+
+INSERT INTO pessoa VALUES ('211.624.902-33', 'Enzo C Almeida','10/03/1976', 'Rua das Flores', '163', 'Petrolina');
+
+INSERT INTO pessoa VALUES('305.178.336-88','Napo Litano Bona Arte','01/12/1977','Rua Paris','1770','São Paulo');
+
+INSERT INTO pessoa VALUES('801.283.373-54','Erick C Sousa','08/01/1972','Avenida São João', '1813','São Paulo');
+
+INSERT INTO pessoa VALUES ('789.543.725-98', 'João M. Freitas','17/11/1991', 'Avenida da luz', '82', 'São Paulo');
+
+INSERT INTO pessoa VALUES ('603.856.173-05', 'Davi R Correia','09/08/1962', 'Rua José Vicente Lacerda', '1961', 'São Paulo');
+
+INSERT INTO pessoa VALUES ('012.325.641-22' , 'Matheus Correia','30/08/2001','Avenida Beltrão','35','Recife');
+
+INSERT INTO pessoa VALUES ('395.888.475-08', 'Caio D Alves','06/04/1962', 'Rua Tupy-A', '1153', 'Garanhuns');
+
+INSERT INTO pessoa VALUES ('872.341.092-09', 'Felipe de Souza','28/02/1982', 'Rua do Cajueiro', '37', 'Garanhuns');
+
+INSERT INTO pessoa VALUES ('931.071.938-95', 'Vitoria F Cavalcanti','6/6/1975', 'Rua Marechal Cândido Rondon', '443', 'Caruaru');
+
+INSERT INTO pessoa VALUES ('453.197.932-41','Sálvio Moura','12/03/1960','Quadra 4','25','Vitória de Santo Antão');
+
+INSERT INTO pessoa VALUES ('187.217.142-74', 'Felipe S Correia','24/9/1960', 'Avenida Líndice', '1166', 'Vitória de Santo Antão');
+
+INSERT INTO pessoa VALUES ('678.094.174-44', 'Caio Juarez','16/07/1999', 'Rua Vitoriosa', '89', 'Vitória de Santo Antão');
+
+
+
 INSERT INTO funcionario (funcionario_cpf, cargo) VALUES ('326.182.003-00', 'Supervisor');
 
 INSERT INTO funcionario VALUES ('321.565.194-71', '326.182.003-00', 'Guia');
@@ -355,3 +405,92 @@ INSERT INTO reliquia VALUES (NEXT VALUE FOR identificador_reliquia_cq,'276.787.1
 INSERT INTO reliquia VALUES (NEXT VALUE FOR identificador_reliquia_cq,'276.787.174-15','Cabeça do Ancestral Comum','Fóssil','600000000');
 
 INSERT INTO reliquia VALUES (NEXT VALUE FOR identificador_reliquia_cq,'276.787.174-15', 'Costela de Alienígena Pré-Histórico', 'Fóssil', '500000');
+
+
+INSERT INTO comprador VALUES ('785.214.448-76', '0025631489-6');
+
+INSERT INTO comprador VALUES ('902.345.278-38', '2635489654-8');
+
+INSERT INTO comprador VALUES ('183.989.570-50', '1124578965-0');
+
+INSERT INTO comprador VALUES ('201.811.925-78', '3836701591-1');
+
+INSERT INTO comprador VALUES ('454.187.783-92', '05406377-4');
+
+INSERT INTO comprador VALUES ('201.111.904-67', '3880411612-2');
+
+INSERT INTO comprador VALUES ('292.957.379-11', '1854470959-7');
+
+
+INSERT INTO artista VALUES ('102.312.573-45', 12000.00);
+
+INSERT INTO artista VALUES ('564.328.478-98', 3000.00);
+
+INSERT INTO artista (artista_cpf) VALUES ('689.207.420-42');
+
+INSERT INTO artista VALUES ('986.124.785-45', 1842.00);
+
+INSERT INTO artista VALUES ('198.228.735-87', 45000.00);
+
+INSERT INTO artista (artista_cpf) VALUES  ('078.845.996-12');
+
+INSERT INTO artista (artista_cpf) VALUES ('678.191.458-44' );
+
+INSERT INTO artista (artista_cpf) VALUES ('635.152.669-17');
+
+INSERT INTO artista VALUES ('456.712.223-00', 30000.00);
+
+INSERT INTO artista VALUES ('514.378.321-98', 7624.32);
+
+
+INSERT INTO visitante VALUES ('123.684.742-66',85248 );
+
+INSERT INTO visitante VALUES ('275.789.321-80', 82177);
+
+INSERT INTO visitante VALUES ('033.858.634-99',25953);
+
+INSERT INTO visitante VALUES ('923.084.271-60', 94803);
+
+INSERT INTO visitante VALUES ('444.608.646-49',84166 );
+
+INSERT INTO visitante VALUES ('116.758.622-06',26942);
+
+INSERT INTO visitante VALUES ('987.925.913-02', 11587);
+
+INSERT INTO visitante VALUES ('371.866.227-20', 49428);
+
+INSERT INTO visitante VALUES('892.549.556-20', 94124);
+
+INSERT INTO visitante VALUES ('277.543.780-89', 76521 );
+
+INSERT INTO visitante VALUES ('551.999.793-45', 56432);
+
+INSERT INTO visitante VALUES('989.445.235-96', 42843);
+
+INSERT INTO visitante VALUES ('102.300.573-45', 10486);
+
+INSERT INTO visitante VALUES ('102.312.573-00', 37598);
+
+INSERT INTO visitante VALUES ('211.624.902-33', 48863);
+
+INSERT INTO visitante VALUES('305.178.336-88', 21825);
+
+INSERT INTO visitante VALUES('801.283.373-54', 91764);
+
+INSERT INTO visitante VALUES ('789.543.725-98', 56702);
+
+INSERT INTO visitante VALUES ('603.856.173-05', 73200);
+
+INSERT INTO visitante VALUES ('012.325.641-22' , 54300);
+
+INSERT INTO visitante VALUES ('395.888.475-08', 76590);
+
+INSERT INTO visitante VALUES ('872.341.092-09', 56432);
+
+INSERT INTO visitante VALUES ('931.071.938-95', 65722);
+
+INSERT INTO visitante VALUES ('453.197.932-41', 65003);
+
+INSERT INTO visitante VALUES ('187.217.142-74', 12390);
+
+INSERT INTO visitante VALUES ('678.094.174-44', 66890);
