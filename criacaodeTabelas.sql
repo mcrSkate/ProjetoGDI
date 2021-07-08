@@ -33,12 +33,15 @@ CREATE TABLE obra_de_arte(
 
 CREATE TABLE reliquia(
     identificador_reliquia INTEGER,
-    cpf_funcionario VARCHAR(15) NOT NULL,
+    funcionario_cpf VARCHAR(15) NOT NULL,
     nome_reliquia VARCHAR(50) NOT NULL,
     categoria_reliquia VARCHAR(30) NOT NULL,
     idade_estimada INTEGER NOT NULL,
-    CONSTRAINT reliquia_pk PRIMARY KEY (identificador_reliquia)
+    CONSTRAINT reliquia_pk PRIMARY KEY (identificador_reliquia),
+	CONSTRAINT funcionario1_cpf_pessoa_cpf_fk FOREIGN KEY (funcionario_cpf) REFERENCES funcionario(funcionario_cpf)
 );
+
+
 
 CREATE TABLE seguro(
     identificador_seguro INTEGER,
