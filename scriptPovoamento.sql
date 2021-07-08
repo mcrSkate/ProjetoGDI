@@ -191,13 +191,13 @@ INSERT INTO seguro VALUES (seguro1_cq.nextval, 18, '902.345.278-38', 2000.00);
 
 CREATE SEQUENCE exposicao_cq INCREMENT BY 1 START WITH 1;
 
-INSERT INTO exposicao VALUES (exposicao_cq.nextval, '12-MAY-2002 8:00:00 PM', 600.00 , 20);
-INSERT INTO exposicao VALUES (exposicao_cq.nextval, '04-OCT-2006 5:00:00 PM', 1600.00, 26);
-INSERT INTO exposicao VALUES (exposicao_cq.nextval,'31-JUL-2018 7:00:00 PM', 4000.00, 10);
-INSERT INTO exposicao VALUES (exposicao_cq.nextval,  '03-JAN-2015 8:30:00 PM', 2520.00, 18);
-INSERT INTO exposicao VALUES (exposicao_cq.nextval, '07-JUN-2018 4:40:00 PM', 1780.00, 4);
-INSERT INTO exposicao (identificador_exposicao,data_exposicao, horario_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval,  '08-JUN-2018 7:30:00 PM', 20);
-INSERT INTO exposicao (identificador_exposicao,data_exposicao, horario_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval,  '04-JAN-2015 8:00:00 PM', 26);
+INSERT INTO exposicao VALUES (exposicao_cq.nextval, 600.00 , 20);
+INSERT INTO exposicao VALUES (exposicao_cq.nextval, 1600.00, 26);
+INSERT INTO exposicao VALUES (exposicao_cq.nextval, 4000.00, 10);
+INSERT INTO exposicao VALUES (exposicao_cq.nextval, 2520.00, 18);
+INSERT INTO exposicao VALUES (exposicao_cq.nextval, 1780.00, 4);
+INSERT INTO exposicao (identificador_exposicao,data_exposicao, horario_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval, 20);
+INSERT INTO exposicao (identificador_exposicao,data_exposicao, horario_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval, 26);
 
 --POVOAMENTO DA TABELA CONTRATA
 
