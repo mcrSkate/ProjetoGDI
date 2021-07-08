@@ -159,3 +159,20 @@ CREATE TABLE contrata(
     CONSTRAINT identificador2_obra_de_arte_fk FOREIGN KEY(identificador_obra_de_arte) REFERENCES obra_de_arte (identificador_obra_de_arte),
     CONSTRAINT identificador_seguro_fk FOREIGN KEY (identificador_seguro) REFERENCES seguro (identificador_seguro)
 );
+
+CREATE TABLE guia(
+    funcionario_cpf VARCHAR(15),
+    visitante_cpf VARCHAR(15),
+    identificador_exposicao INTEGER NOT NULL,
+    CONSTRAINT guia_pk PRIMARY KEY(funcionario_cpf,visitante_cpf,identificador_exposicao),
+    CONSTRAINT funcionario_cpf_pessoa_cpf_g_fk FOREIGN KEY (funcionario_cpf) REFERENCES pessoa(pessoa_cpf),
+    CONSTRAINT visitante_cpf_pessoa_cpf_g_fk FOREIGN KEY (visitante_cpf) REFERENCES pessoa(pessoa_cpf),
+    CONSTRAINT identificador_exposicao_g_fk FOREIGN KEY (identificador_exposicao) REFERENCES exposicao(identificador_exposicao)
+);
+
+CREATE TABLE data_exposicao(
+    identificador_exposicao INTEGER,
+    data_e_hora TIMESTAMP NOT NULL,
+    CONSTRAINT data_exposicao_pk PRIMARY KEY(identificador_exposicao),
+    CONSTRAINT identificador_exposicao_d_fk FOREIGN KEY (identificador_exposicao) REFERENCES exposicao(identificador_exposicao)
+);
