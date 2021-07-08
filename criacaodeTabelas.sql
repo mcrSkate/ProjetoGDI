@@ -51,8 +51,7 @@ CREATE TABLE seguro(
 
 CREATE TABLE exposicao(
     identificador_exposicao INTEGER,
-    data_exposicao DATE NOT NULL,
-    horario_exposicao TIMESTAMP NOT NULL,
+    data_horario_exposicao TIMESTAMP NOT NULL,
     dinheiro_arrecadado NUMERIC,
     numero_visitantes INTEGER NOT NULL,
     CONSTRAINT exposicao_pk PRIMARY KEY (identificador_exposicao)
