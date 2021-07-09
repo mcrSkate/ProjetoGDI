@@ -482,3 +482,14 @@ INSERT INTO comunicacao_pessoa VALUES ('187.217.142-74', 'felipe_correia@mail.co
 INSERT INTO comunicacao_pessoa VALUES ('678.094.174-44', 'caio_juarez@mail.com');
 
 
+--POVOAMENTO DA TABELA DATA EXPOSICAO
+
+INSERT INTO data_exposicao VALUES (1, '12-MAY-2002 8:00:00 PM');
+INSERT INTO data_exposicao VALUES (2, '04-OCT-2006 5:00:00 PM');
+INSERT INTO data_exposicao VALUES (3, '31-JUL-2018 7:00:00 PM');
+INSERT INTO data_exposicao VALUES (4, '03-JAN-2015 8:30:00 PM');
+INSERT INTO data_exposicao VALUES (5, '07-JUN-2018 4:40:00 PM');
+INSERT INTO data_exposicao VALUES (6, '08-JUN-2018 7:30:00 PM');
+INSERT INTO data_exposicao VALUES (7, '04-JAN-2015 8:00:00 PM');
+
+
