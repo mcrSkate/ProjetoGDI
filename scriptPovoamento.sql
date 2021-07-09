@@ -196,8 +196,8 @@ INSERT INTO exposicao VALUES (exposicao_cq.nextval, 1600.00, 26);
 INSERT INTO exposicao VALUES (exposicao_cq.nextval, 4000.00, 10);
 INSERT INTO exposicao VALUES (exposicao_cq.nextval, 2520.00, 18);
 INSERT INTO exposicao VALUES (exposicao_cq.nextval, 1780.00, 4);
-INSERT INTO exposicao (identificador_exposicao,data_exposicao, horario_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval, 20);
-INSERT INTO exposicao (identificador_exposicao,data_exposicao, horario_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval, 26);
+INSERT INTO exposicao (identificador_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval, 20);
+INSERT INTO exposicao (identificador_exposicao,numero_visitantes) VALUES (exposicao_cq.nextval, 26);
 
 --POVOAMENTO DA TABELA CONTRATA
 
