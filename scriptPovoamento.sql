@@ -553,5 +553,30 @@ INSERT INTO guia VALUES ('112.352.284-68','923.084.271-60', 7);
 INSERT INTO guia VALUES ('321.565.194-71','931.071.938-95', 7);
 
 
+INSERT INTO pessoa VALUES ('586.174.486-15', 'João Maurício Santos','07-AUG-1996', 'Avenida José Petribu', '99', 'Vitória de Santo Antão');
+
+
+INSERT INTO pessoa VALUES ('345.780.230-12', 'Ricardo Alves de Almeida','12-SEP-1980', 'Rua marechal oliveira', '125', 'Carne de Vaca');
+
+
+INSERT INTO comprador VALUES ('586.174.486-15', '5679564550-9');
+
+
+INSERT INTO comprador VALUES ('345.780.230-12', '8899523450-7');
+
+
+INSERT INTO compra VALUES ('586.174.486-15',8);
+
+
+INSERT INTO compra VALUES ('201.811.925-78', 16);
+
+
+INSERT INTO compra VALUES ('345.780.230-12', 9);
+
+
+INSERT INTO compra VALUES ('345.780.230-12', 10);
+
+
+INSERT INTO compra VALUES ('345.780.230-12', 17);
 
 
