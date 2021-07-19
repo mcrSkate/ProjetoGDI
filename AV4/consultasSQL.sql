@@ -92,6 +92,7 @@ FROM (SELECT *
     FROM funcionario F
     INNER JOIN pagamento P 
     ON P.cargo = F.cargo);
+ 
 --CONTA A QUANTIDADE DE FUNCIONARIOS QUE SÃO SEGURANÇAS E SERVIÇOS GERAIS
 --CHECKLIST: COUNT
 SELECT COUNT (*) FROM funcionario WHERE cargo IN ('Serviços Gerais', 'Segurança');
@@ -103,7 +104,11 @@ SELECT pessoa.*, funcionario.cargo
 FROM pessoa
 LEFT JOIN funcionario ON pessoa.pessoa_cpf = funcionario.funcionario_cpf;
 
---CHECKLIST  SUBCONSULTA RELACIONAL FALTA!!!
+--SELECIONA AS OBRAS DE ARTES QUE SÃO MAIS CARAS QUE A MÉDIA DOS VALORES DA OBRA DE ARTE
+--CHECKLIST: SUBCONSULTA COM OPERADOR RELACIONAL
+SELECT nome_obra,valor AS preço 
+FROM obra_de_arte 
+WHERE valor > (SELECT AVG(valor) FROM obra_de_arte);
 
 --SELECIONA OS NOMES E CPF DOS VISITANTES QUE MAIS FORAM A EXPOSICOES
 --CHECKLIST: SUBCONSULTA COM IN E GROUP BY
