@@ -28,7 +28,7 @@ obra_1 obras_nao_cadastradas;
 
 PROCEDURE printObradeArte( obra IN obras_nao_cadastradas, i IN NUMBER) IS
     BEGIN
-        dbms_output.put_line('Identificador da Obra: '  || obra(i).identificador_obra_de_arte );
+        dbms_output.put_line('Cpf do Artista: '  || obra(i).artista_cpf );
         dbms_output.put_line('Cpf do Funcionario responsavel por Cadastrar a Obra: '  || obra(i).funcionario_cpf);
          dbms_output.put_line('Nome da Obra: ' ||  obra(i).nome_obra);
         dbms_output.put_line('Categoria da Obra de Arte: ' || obra(i).CATEGORIA_OBRA_DE_ARTE);
@@ -39,42 +39,42 @@ PROCEDURE printObradeArte( obra IN obras_nao_cadastradas, i IN NUMBER) IS
 
 BEGIN
 
-obra_1(0).identificador_obra_de_arte := (21);
+obra_1(0).artista_cpf := ('102.312.573-45');
 obra_1(0).funcionario_cpf := ('177.235.819-39');
 obra_1(0).nome_obra := ('Monalisa Digital');
 obra_1(0).categoria_obra_de_arte := ('Pintura');
 obra_1(0).valor := ( 30000);
 obra_1(0).data_de_criacao := ('12-MAY-2020');
 
-obra_1(1).identificador_obra_de_arte := (22);
+obra_1(1).artista_cpf := ('198.228.735-87');
 obra_1(1).funcionario_cpf := ('276.787.174-15');
 obra_1(1).nome_obra := ('Pé Grande');
 obra_1(1).categoria_obra_de_arte := ('Escultura');
 obra_1(1).valor := (8000);
 obra_1(1).data_de_criacao := ('09-MAY-1992');
 
-obra_1(2).identificador_obra_de_arte := (23);
+obra_1(2).artista_cpf := ('456.712.223-00');
 obra_1(2).funcionario_cpf := ('573.972.289-18');
 obra_1(2).nome_obra := ('O dado do Banco');
 obra_1(2).categoria_obra_de_arte := ('Escultura');
 obra_1(2).valor := (500.00);
 obra_1(2).data_de_criacao := ('22-APR-2012');
 
-obra_1(3).identificador_obra_de_arte := (24);
+obra_1(3).artista_cpf := ('514.378.321-98');
 obra_1(3).funcionario_cpf := ('276.787.174-15');
 obra_1(3).nome_obra := ('Migração');
 obra_1(3).categoria_obra_de_arte := ('Escultura');
 obra_1(3).valor := (2000.00);
 obra_1(3).data_de_criacao := ('30-APR-1979');
 
-obra_1(4).identificador_obra_de_arte := (25);
+obra_1(4).artista_cpf := ('198.228.735-87');
 obra_1(4).funcionario_cpf := ('177.235.819-39');
 obra_1(4).nome_obra := ('A Morte de Sócrates');
 obra_1(4).categoria_obra_de_arte := ('Pintura');
 obra_1(4).valor := (20500.00);
 obra_1(4).data_de_criacao := ('24-DEC-1981');
 
-obra_1(5).identificador_obra_de_arte := (26);
+obra_1(5).artista_cpf := ('986.124.785-45');
 obra_1(5).funcionario_cpf := ('573.972.289-18');
 obra_1(5).nome_obra := ('Fan de ventilador');
 obra_1(5).categoria_obra_de_arte := ('Escultura');
@@ -93,7 +93,7 @@ END;
 --ESSE BLOCO CRIA UMA FUNÇAO QUE PROCURA A MENSALIDADE DO SEGURO DE UMA OBRA DE ARTE
 --E CASO NAO EXISTA A OBRA, UMA EXCECAO É LEVANTADA
 --CHECKLIST: CREATE FUNCTION, IF ELSIF, SELECT INTO, EXCEPTION WHEN
-DECLARE
+/*DECLARE
 
 
 mensalidade number;
@@ -104,7 +104,8 @@ RETURN NUMBER IS
     mensalidade NUMBER;
 BEGIN
     SELECT S.mensalidade INTO mensalidade
-    FROM obra_de_arte O LEFT JOIN seguro S ON O.identificador_obra_de_arte = S.identificador_obra_de_arte
+    FROM obra_de_arte O LEFT JOIN seguro S ON O.artista_cpf LIKE S.artista_cpf
+    AND O.data_de_criacao = S.data_de_criacao
     WHERE O.nome_obra = nomeObradeArte;
 
     RETURN mensalidade;
@@ -129,7 +130,7 @@ EXCEPTION WHEN no_data_found THEN
       dbms_output.put_line('Error'); 
 END;
 /
-
+*/
 
 --ESSE BLOCO CONTA A QUANTIDADE DE RELIQUIAS MAIS NOVAS QUE A RELIQUIA PASSADA NA FUNÇÃO
 --CHECKLIST: NENHUM NOVO, MAS UTILIZA DE OUTROS QUE JÁ FORAM MOSTRADOS
@@ -196,7 +197,7 @@ END;
 --ESSE BLOCO PROCURA A OBRA DE ARTE MAIS ANTIGA QUE AINDA NAO FOI VENDIDA ATRAVES
 -- DE UM WHILE LOOP
 --CHECKLIST: WHILE LOOP
-DECLARE
+/*DECLARE
 
     j NUMBER;
     cpf compra.comprador_cpf%type;
@@ -221,7 +222,7 @@ BEGIN
     dbms_output.put_line('O id da obra de arte mais antiga não comprada é ' || j);
 END;
 /
-
+*/
 
 --ESTE BLOCO CRIA UM CURSOR PARA PRINTAR O NOME CONTA E AGENCIA DE CADA COMPRADOR
 --CHECKLIST: LOOP EXIT WHEN, CURSOR(OPEN, FETCH E CLOSE)
@@ -257,12 +258,12 @@ END;
 DECLARE
 
     v_nome  pessoa.nome_pessoa%TYPE;
-    v_email comunicacao_pessoa.email%TYPE;
+    v_email pessoa.email%TYPE;
     
     CURSOR c_email IS
-        SELECT d.nome_pessoa, g.email
-        FROM pessoa d INNER JOIN comunicacao_pessoa g ON g.pessoa_cpf LIKE d.pessoa_cpf
-        WHERE g.email LIKE 'm%';
+        SELECT nome_pessoa, email
+        FROM pessoa
+        WHERE email LIKE 'm%';
         
 BEGIN
 
@@ -318,29 +319,25 @@ CREATE OR REPLACE PACKAGE BODY package_pessoa AS
         c_email varchar2
     ) IS
     BEGIN
-        INSERT INTO pessoa (pessoa_cpf, nome_pessoa, data_nascimento, rua, numero_casa, cidade)
-        VALUES(c_cpf, c_nome, c_data_nascimento, c_rua, c_numero, c_cidade);
+        INSERT INTO pessoa (pessoa_cpf, nome_pessoa, email, data_nascimento, rua, numero_casa, cidade)
+        VALUES(c_cpf, c_nome, c_email, c_data_nascimento, c_rua, c_numero, c_cidade);
         
         INSERT INTO endereco_pessoa
         VALUES (c_rua, c_numero, c_cidade, c_pais);
         
-        INSERT INTO comunicacao_pessoa 
-        VALUES (c_cpf, c_email);
     END;
     
     PROCEDURE removerPessoa (
         c_cpf varchar2
     ) IS 
     BEGIN
-        DELETE FROM comunicacao_pessoa WHERE c_cpf = comunicacao_pessoa.pessoa_cpf;
         DELETE FROM pessoa WHERE c_cpf = pessoa.pessoa_cpf;
     END;
     
     PROCEDURE listarPessoas
     IS
-    CURSOR c_pessoas is SELECT  P.*, E.pais, C.email FROM pessoa P
-            INNER JOIN endereco_pessoa E ON (E.rua = P.rua AND E.numero = P.numero_casa AND E.cidade = P.cidade)
-            INNER JOIN comunicacao_pessoa C ON (C.pessoa_cpf = P.pessoa_cpf);
+    CURSOR c_pessoas is SELECT  P.*, E.pais FROM pessoa P
+            INNER JOIN endereco_pessoa E ON (E.rua = P.rua AND E.numero = P.numero_casa AND E.cidade = P.cidade);
     BEGIN
         FOR n IN c_pessoas LOOP
         
@@ -425,7 +422,7 @@ END altera_qtd_visitantes;
 
 --ESTE BLOCO FOI CRIADO PARA TESTAR O GATILHO DE LINHA ACIMA
 DECLARE
-    TYPE possiveL_visitante IS RECORD (pessoa_cpf1 pessoa.pessoa_cpf%TYPE, nome_pessoa1 pessoa.nome_pessoa%TYPE, data_nascimento1 pessoa.data_nascimento%TYPE, rua1 pessoa.rua%TYPE, numero_casa1 pessoa.numero_casa%TYPE, cidade1 pessoa.cidade%TYPE, numero_do_ingresso visitante.num_ingresso%TYPE, numero_exposicao exposicao.identificador_exposicao%TYPE); 
+    TYPE possiveL_visitante IS RECORD (pessoa_cpf1 pessoa.pessoa_cpf%TYPE, nome_pessoa1 pessoa.nome_pessoa%TYPE, data_nascimento1 pessoa.data_nascimento%TYPE, rua1 pessoa.rua%TYPE, numero_casa1 pessoa.numero_casa%TYPE, cidade1 pessoa.cidade%TYPE, numero_do_ingresso visitante.num_ingresso%TYPE, numero_exposicao exposicao.identificador_exposicao%TYPE, email_pessoa pessoa.email%TYPE); 
     TYPE possiveis_visitantes IS TABLE OF possivel_visitante INDEX BY BINARY_INTEGER;
     lista1 possiveis_visitantes;
     guia_escolhido VARCHAR2(15);
@@ -436,7 +433,7 @@ DECLARE
     END guia_menos_utilizado;
     PROCEDURE adicionar_pessoas(nova_pessoa IN possiveis_visitantes, i IN NUMBER) IS
     BEGIN
-        INSERT INTO pessoa VALUES (nova_pessoa(i).pessoa_cpf1, nova_pessoa(i).nome_pessoa1, nova_pessoa(i).data_nascimento1, nova_pessoa(i).rua1, nova_pessoa(i).numero_casa1, nova_pessoa(i).cidade1);
+        INSERT INTO pessoa VALUES (nova_pessoa(i).pessoa_cpf1, nova_pessoa(i).nome_pessoa1, nova_pessoa(i).email_pessoa, nova_pessoa(i).data_nascimento1, nova_pessoa(i).rua1, nova_pessoa(i).numero_casa1, nova_pessoa(i).cidade1);
         IF nova_pessoa(i).numero_do_ingresso IS NOT NULL THEN 
             INSERT INTO visitante VALUES (nova_pessoa(i).pessoa_cpf1, nova_pessoa(i).numero_do_ingresso);
             guia_escolhido := guia_menos_utilizado;
@@ -451,6 +448,7 @@ BEGIN
     lista1(0).rua1 := 'Rua José Bonifácio Pessoa';
     lista1(0).numero_casa1 := 82;
     lista1(0).cidade1 := 'Boa Vista';
+    lista1(0).email_pessoa := '1@email.com';
     lista1(1).pessoa_cpf1 := '228.483.059-81';
     lista1(1).nome_pessoa1 := 'Lucas Moreira de Melo Rocha';
     lista1(1).data_nascimento1 := '07-DEC-1984';
@@ -459,6 +457,7 @@ BEGIN
     lista1(1).cidade1 := 'Recife';
     lista1(1).numero_do_ingresso := 50883;
     lista1(1).numero_exposicao := 3;
+    lista1(1).email_pessoa := '1@email.com';
     lista1(2).pessoa_cpf1 := '048.174.964.83';
     lista1(2).nome_pessoa1 := 'Francisco Aguiar Nascimento';
     lista1(2).data_nascimento1 := '08-SEP-1998';
@@ -467,6 +466,7 @@ BEGIN
     lista1(2).cidade1 := 'Lagoa do Carro';
     lista1(2).numero_do_ingresso := 71624;
     lista1(2).numero_exposicao := 3;
+    lista1(2).email_pessoa := '1@email.com';
     FOR J IN 0..2 LOOP
         adicionar_pessoas(lista1,J);
     END LOOP;

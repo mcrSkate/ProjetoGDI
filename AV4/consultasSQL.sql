@@ -1,15 +1,15 @@
 --ADICIONA CHAVES ESTRANGEIRAS PARA A TABELA SEGURO
 --CHECKLIST: ALTER TABLE
 
-ALTER TABLE seguro
+/*ALTER TABLE seguro
 ADD (CONSTRAINT identificador_obra_de_arte_fkey 
     FOREIGN KEY (identificador_obra_de_arte) 
-    REFERENCES obra_de_arte(identificador_obra_de_arte));
+    REFERENCES obra_de_arte(identificador_obra_de_arte));*/
 
-ALTER TABLE seguro
+/*ALTER TABLE seguro
 ADD (CONSTRAINT comprador_cpf_fkey 
     FOREIGN KEY (comprador_cpf) 
-    REFERENCES comprador(comprador_cpf));
+    REFERENCES comprador(comprador_cpf));*/
 
 --CRIA INDICES PARA FAZER CONSULTAS MAIS RAPIDAS
 --CHECKLIST: CREATE INDEX
@@ -21,6 +21,7 @@ CREATE INDEX indice_valor_obra ON obra_de_arte(valor);
 INSERT INTO pessoa VALUES 
 ('603.961.260-65', 
 'Emanuela Cardoso Oliveira', 
+'emanuela_oliveira@mail.com',
 '19-MAY-1990', 'Rua Marília', 
 '1200', 'Caruaru');
 
@@ -162,23 +163,23 @@ ORDER BY G.visitante_cpf, D.data_e_hora;
 
 --ESSA CONSULTA LISTA OS EMAILS DE TODOS AS PESSOAS QUE NÃO SÃO FUNCIONÁRIOS
 --CHECKLIST: MINUS 
-SELECT email
+/*SELECT email
 FROM (SELECT pessoa_cpf
     FROM pessoa
     MINUS
     SELECT funcionario_cpf
     FROM funcionario) P
-INNER JOIN comunicacao_pessoa C ON  P.pessoa_cpf = C.pessoa_cpf;
+INNER JOIN comunicacao_pessoa C ON  P.pessoa_cpf = C.pessoa_cpf;*/ 
 
 --ESSA CONSULTA CRIA UMA VIEW QUE POSSUI O CPF DOS ARTISTAS QUE TIVERAM SUAS OBRAS
 --COMPRADAS JUNTAMENTE COM O ID DA OBRA E O CPF DO COMPRADOR
 --CHECKLIST: CREATE VIEW
-CREATE VIEW compra_artista AS 
+/*CREATE VIEW compra_artista AS 
 SELECT C.artista_cpf, C.identificador_obra_de_arte, P.comprador_cpf
 FROM criador C, compra P
 WHERE C.identificador_obra_de_arte = P.identificador_obra_de_arte;
 
-SELECT * FROM compra_artista;
+SELECT * FROM compra_artista;*/
 
 --ESSA CONSULTA CRIA UMA VIEW COM O NOME DOS FUNCIONARIOS QUE CADASTRARAM
 --OBRAS QUE POSSUEM VALOR MAIOR QUE 25000
