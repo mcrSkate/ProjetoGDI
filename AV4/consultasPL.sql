@@ -93,27 +93,20 @@ END;
 --ESSE BLOCO CRIA UMA FUNÇAO QUE PROCURA A MENSALIDADE DO SEGURO DE UMA OBRA DE ARTE
 --E CASO NAO EXISTA A OBRA, UMA EXCECAO É LEVANTADA
 --CHECKLIST: CREATE FUNCTION, IF ELSIF, SELECT INTO, EXCEPTION WHEN
-/*DECLARE
-
-
+DECLARE
 mensalidade number;
-
-
 FUNCTION mensalidadeObradeArte (nomeObradeArte obra_de_arte.nome_obra%TYPE)
 RETURN NUMBER IS
     mensalidade NUMBER;
 BEGIN
     SELECT S.mensalidade INTO mensalidade
-    FROM obra_de_arte O LEFT JOIN seguro S ON O.artista_cpf LIKE S.artista_cpf
-    AND O.data_de_criacao = S.data_de_criacao
+    FROM obra_de_arte O
+    LEFT JOIN contrata C ON O.artista_cpf = C.artista_cpf AND O.data_de_criacao = C.data_de_criacao
+    LEFT JOIN seguro S ON C.identificador_seguro = S.identificador_seguro
     WHERE O.nome_obra = nomeObradeArte;
-
     RETURN mensalidade;
 END;
-
 BEGIN
-
-
     mensalidade := mensalidadeObradeArte('Pensamento de Cézar');
     
     IF mensalidade IS NULL THEN
@@ -130,7 +123,6 @@ EXCEPTION WHEN no_data_found THEN
       dbms_output.put_line('Error'); 
 END;
 /
-*/
 
 --ESSE BLOCO CONTA A QUANTIDADE DE RELIQUIAS MAIS NOVAS QUE A RELIQUIA PASSADA NA FUNÇÃO
 --CHECKLIST: NENHUM NOVO, MAS UTILIZA DE OUTROS QUE JÁ FORAM MOSTRADOS
