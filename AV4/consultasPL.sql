@@ -93,27 +93,20 @@ END;
 --ESSE BLOCO CRIA UMA FUNÇAO QUE PROCURA A MENSALIDADE DO SEGURO DE UMA OBRA DE ARTE
 --E CASO NAO EXISTA A OBRA, UMA EXCECAO É LEVANTADA
 --CHECKLIST: CREATE FUNCTION, IF ELSIF, SELECT INTO, EXCEPTION WHEN
-/*DECLARE
-
-
+DECLARE
 mensalidade number;
-
-
 FUNCTION mensalidadeObradeArte (nomeObradeArte obra_de_arte.nome_obra%TYPE)
 RETURN NUMBER IS
     mensalidade NUMBER;
 BEGIN
     SELECT S.mensalidade INTO mensalidade
-    FROM obra_de_arte O LEFT JOIN seguro S ON O.artista_cpf LIKE S.artista_cpf
-    AND O.data_de_criacao = S.data_de_criacao
+    FROM obra_de_arte O
+    LEFT JOIN contrata C ON O.artista_cpf = C.artista_cpf AND O.data_de_criacao = C.data_de_criacao
+    LEFT JOIN seguro S ON C.identificador_seguro = S.identificador_seguro
     WHERE O.nome_obra = nomeObradeArte;
-
     RETURN mensalidade;
 END;
-
 BEGIN
-
-
     mensalidade := mensalidadeObradeArte('Pensamento de Cézar');
     
     IF mensalidade IS NULL THEN
@@ -130,7 +123,6 @@ EXCEPTION WHEN no_data_found THEN
       dbms_output.put_line('Error'); 
 END;
 /
-*/
 
 --ESSE BLOCO CONTA A QUANTIDADE DE RELIQUIAS MAIS NOVAS QUE A RELIQUIA PASSADA NA FUNÇÃO
 --CHECKLIST: NENHUM NOVO, MAS UTILIZA DE OUTROS QUE JÁ FORAM MOSTRADOS
@@ -194,35 +186,30 @@ END CASE;
 END;
 /
 
---ESSE BLOCO PROCURA A OBRA DE ARTE MAIS ANTIGA QUE AINDA NAO FOI VENDIDA ATRAVES
+--ESSE BLOCO PROCURA A RELIQUIA MAIS ANTIGA QUE AINDA NAO FOI EXPOSTA ATRAVES
 -- DE UM WHILE LOOP
 --CHECKLIST: WHILE LOOP
-/*DECLARE
-
+DECLARE
     j NUMBER;
-    cpf compra.comprador_cpf%type;
-
+    numero NUMBER;
 BEGIN
-
     j := 0; 
-    cpf := '0'; --inicializando o cpf pra nao ter um valor nulo
+    numero := 0; --inicializando o cpf pra nao ter um valor nulo
     
-    WHILE cpf IS NOT NULL LOOP 
+    WHILE numero IS NOT NULL LOOP 
         j:= j + 1;
         
-        SELECT C.comprador_cpf 
-        INTO cpf 
-        FROM obra_de_arte O 
-        LEFT JOIN compra C 
-        ON C.identificador_obra_de_arte = O.identificador_obra_de_arte 
-        WHERE O.identificador_obra_de_arte = j;
+        SELECT E.numero_protocolo_confirmacao INTO numero
+        FROM reliquia R
+        LEFT JOIN expoe_reliquia E ON R.identificador_reliquia = E.identificador_reliquia  
+        WHERE R.identificador_reliquia = j;
         
         
     END LOOP;  
-    dbms_output.put_line('O id da obra de arte mais antiga não comprada é ' || j);
+    dbms_output.put_line('O id da reliquia mais antiga no sistema que ainda não foi exposta é ' || j);
 END;
 /
-*/
+
 
 --ESTE BLOCO CRIA UM CURSOR PARA PRINTAR O NOME CONTA E AGENCIA DE CADA COMPRADOR
 --CHECKLIST: LOOP EXIT WHEN, CURSOR(OPEN, FETCH E CLOSE)
