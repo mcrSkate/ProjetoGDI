@@ -62,7 +62,7 @@
     <links xmi:type="eer:InheritanceSL" xmi:id="_5DmdwNOzEeuQSPTnk0DOog" source="_8zhhl9OyEeuQSPTnk0DOog" target="_w4ju8NOzEeuQSPTnk0DOog"/>
     <links xmi:type="eer:InheritanceSL" xmi:id="_6zuXkNOzEeuQSPTnk0DOog" source="__BCiB9OyEeuQSPTnk0DOog" target="_w4ju8NOzEeuQSPTnk0DOog"/>
     <links xmi:type="eer:InheritanceSL" xmi:id="_Wn63QNO0EeuQSPTnk0DOog" source="_MQsaN9OzEeuQSPTnk0DOog" target="_w4ju8NOzEeuQSPTnk0DOog"/>
-    <links xmi:type="eer:InheritanceGL" xmi:id="_fT4h0NO0EeuQSPTnk0DOog" source="_g56g8NOzEeuQSPTnk0DOog" target="_w4ju8NOzEeuQSPTnk0DOog"/>
+    <links xmi:type="eer:InheritanceGL" xmi:id="_fT4h0NO0EeuQSPTnk0DOog" completeness="TOTAL" source="_g56g8NOzEeuQSPTnk0DOog" target="_w4ju8NOzEeuQSPTnk0DOog"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_EvbWQNO1EeuQSPTnk0DOog" source="_g56g8NOzEeuQSPTnk0DOog" target="_qpcE0NO0EeuQSPTnk0DOog"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_FXwhkNO1EeuQSPTnk0DOog" source="_g56g8NOzEeuQSPTnk0DOog" target="_sfEJsNO0EeuQSPTnk0DOog"/>
     <links xmi:type="eer:AttributeLink" xmi:id="_GCjyENO1EeuQSPTnk0DOog" source="_g56g8NOzEeuQSPTnk0DOog" target="_uBlFUNO0EeuQSPTnk0DOog"/>
