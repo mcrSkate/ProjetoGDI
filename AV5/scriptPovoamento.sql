@@ -171,8 +171,6 @@ INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.i
 INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 10), 
 (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,7902);
 
-
-
 INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 2), 
 (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,9080);
 
@@ -251,5 +249,40 @@ UPDATE tb_artista a
 SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('31-DEC-1999','Século Novo','Pintura', 89005.00 ),
                     tp_obra_de_arte('09-FEB-1982','O limão','Escultura', 90005.00))
 WHERE a.cpf = '514.378.321-98';
+                                
+--POVOANDO OBRAS DE ARTES EM FUNCIONARIOS
+
+UPDATE tb_funcionario f
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('25-JAN-2013','Labirinto dos Céus', 'Pintura', 12000.0),
+                                    tp_obra_de_arte('13-JAN-1989','Pensamento de Cézar', 'Escultura', 30000.0),
+                                    tp_obra_de_arte('11-MAY-2002','O Pé Grande','Pintura', 4500.00),
+                                    tp_obra_de_arte('15-APR-2021','Escuridão','Pintura', 5600.00),
+                                    tp_obra_de_arte('19-MAY-2000','O choro','Escultura', 80000.00),
+                                    tp_obra_de_arte('08-APR-1940','A torre de ossos','Escultura', 5300.0),
+                                    tp_obra_de_arte('20-FEB-2002','Coraline','Pintura', 200000.0),
+                                    tp_obra_de_arte('29-JAN-1954','Morte','Pintura', 20500.0),
+                                    tp_obra_de_arte('08-APR-1996','Caminho para o céu','Pintura', 86710.0),
+                                    tp_obra_de_arte('13-JUL-1994','Chápeu Amarelo','Escultura', 5000.0))
+WHERE f.cpf = '602.897.321-75';
+
+UPDATE tb_funcionario f
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('05-NOV-1966','Torre de babel','Escultura', 18000.00),
+                                    tp_obra_de_arte('02-NOV-2001','Estrada de espinhos','Escultura', 126000.00),
+                                    tp_obra_de_arte('07-APR-2010','Amazônia Azul','Pintura', 56000.00),
+                                    tp_obra_de_arte('04-JUL-2021','Lonamisa','Pintura', 7420.00),
+                                    tp_obra_de_arte('09-DEC-1983','Rosto sem cores','Pintura', 89000.00))
+WHERE f.cpf = '573.972.289-18';
+
+UPDATE tb_funcionario f
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('26-JAN-2014','O Banco de Dados','Escultura', 18500.00),
+                                    tp_obra_de_arte('09-APR-2015','Sonalima','Pintura', 32000.00),
+                                    tp_obra_de_arte('21-JUL-1975','Pintura Lendária','Escultura', 100000.00))
+WHERE f.cpf = '276.787.174-15';
+
+UPDATE tb_funcionario f
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('31-DEC-1999','Século Novo','Pintura', 89005.00),
+                                    tp_obra_de_arte('09-FEB-1982','O limão','Escultura', 90005.00))
+WHERE f.cpf = '177.235.819-39';
+
 
 
