@@ -119,6 +119,7 @@ CREATE OR REPLACE TYPE BODY tp_funcionario AS
     END;
 
 END;
+/
 
 CREATE TABLE tb_funcionario OF tp_funcionario
 NESTED TABLE lista_obras STORE AS tp_lista_obras2;
