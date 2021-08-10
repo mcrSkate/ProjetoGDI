@@ -16,6 +16,7 @@ CREATE OR REPLACE TYPE BODY tp_reliquia AS
     END;
     
 END;
+/
 
 CREATE TABLE tb_reliquia OF tp_reliquia (
    identificador_reliquia PRIMARY KEY,
