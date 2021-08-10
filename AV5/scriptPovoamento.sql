@@ -63,4 +63,81 @@ INSERT INTO tb_visitante VALUES (tp_visitante('453.197.932-41','Sálvio Moura','
 INSERT INTO tb_visitante VALUES (tp_visitante('187.217.142-74', 'Felipe S Correia','felipe_correia@mail.com','24-SEP-1960', tp_fones(tp_fone('91' ,'961828166')), tp_endereco('Avenida Líndice', '1166', 'Vitória de Santo Antão','Brasil'), 12390));
 INSERT INTO tb_visitante VALUES (tp_visitante('678.094.174-44', 'Caio Juarez','caio_juarez@mail.com','16-JUL-1999', tp_fones(tp_fone('99' ,'902269157')), tp_endereco('Rua Vitoriosa', '89', 'Vitória de Santo Antão','Brasil'), 66890));
 
+--POVOAMENTO DE FUNCIONARIO
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('326.182.003-00', 'Manoel Freitas',
+'manoel_freitas@mail.com', to_date('31/08/2001','dd/mm/yyyy'),tp_fones(tp_fone('89' ,'904172235')), 
+tp_endereco('Avenida Cuiabá', '17', 'Garanhuns' , 'Brasil'), 'Supervisor', '10000.00', tb_obra_de_arte(), null));
+
+  
+INSERT INTO tb_funcionario VALUES(tp_funcionario('321.565.194-71', 'Tomás C Correia'  ,
+'tomas_correia@mail.com', to_date('31/03/1973','dd/mm/yyyy'),tp_fones(tp_fone( '89' ,'908202624')), 
+tp_endereco('Aeroporto São Domingos','75','Garanhuns', 'Brasil'), 'Guia', '5000.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('602.897.321-75',  'João Maria', 'joao_maria@mail.com',
+to_date('20/11/1974','dd/mm/yyyy'),tp_fones(tp_fone( '89' ,'902238819')), 
+tp_endereco('Escada de Cima', '08', 'Garanhuns', 'Brasil'), 'Serviços Gerais', '3200.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('177.235.819-39', 'Rafaela P Gomes','rafaela_gomes@mail.com',
+to_date('08/03/1961','dd/mm/yyyy'),tp_fones(tp_fone( '89' ,'909048990')), 
+tp_endereco('Rua Wlademira do Amaral', '293', 'Manaus','Brasil'), 'Serviços Gerais', '3200.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('612.547.610-39',  'Sofia C Fernandes','sofia_fernandes@mail.com' ,
+to_date('12/01/1981','dd/mm/yyyy'),tp_fones(tp_fone( '89' ,'902238819')), 
+tp_endereco('Rua Lima', '797', 'Ribeirão das Neves','Brasil'), 'Serviços Gerais', '3200.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('112.352.284-68',  'Márcia Araújo','marcia_araujo@mail.com',
+to_date('09/03/1984','dd/mm/yyyy'),tp_fones(tp_fone( '31' ,'981181242')), 
+tp_endereco('Fazenda Campo Alegre', '188', 'Manaus','Brasil'), 'Guia', '5000.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('727.729.412-21','Clara A Silva','clara_silva@mail.com',
+to_date('08/08/1967','dd/mm/yyyy'),tp_fones(tp_fone( '31' ,'974772210')), 
+tp_endereco( 'Rua Servidão Vieira da Silva ', '1370', 'Manaus','Brasil'), 'Segurança', '5480.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('673.629.234-98', 'Luana Santana de Moureira', 'luana_santana@mail.com',
+to_date('01/08/1982','dd/mm/yyyy'),tp_fones(tp_fone( '31' ,'947484018')), 
+tp_endereco( 'Rua de cima', '04', 'Carne de Vaca','Brasil'), 'Segurança', '5480.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('903.695.561-00', 'Júlia O Fernandes', 'julia_fernandes@mail.com',
+to_date('21/04/1990','dd/mm/yyyy'),tp_fones(tp_fone( '31' ,'972180208')), 
+tp_endereco( 'Avenida Marginal', '1857', 'Jundiai','Brasil'), 'Restaurador', '12000.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('181.250.432-25', 'Vitor G Ribeiro','vitor_ribeiro@mail.com',
+to_date('05/12/1970','dd/mm/yyyy'),tp_fones(tp_fone( '31' ,'923113473')), 
+tp_endereco( 'Rua João Florêncio Fontes', '1091', 'Osasco','Brasil'), 'Restaurador', '12000.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('276.787.174-15', 'Mauro Sérgio', 'mauro_sergio@mail.com',
+to_date('05/05/1962','dd/mm/yyyy'),tp_fones(tp_fone('31' ,'950351661')), 
+tp_endereco( 'Time Square','324','New York','Estados Unidos'), 'Gerente', '15000.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+INSERT INTO tb_funcionario VALUES(tp_funcionario('573.972.289-18', 'Clarissa B. Ribeiro','clarissa_ribeiro@mail.com', 
+to_date('15/06/1986','dd/mm/yyyy'),tp_fones(tp_fone('31' ,'925784912')), 
+tp_endereco( 'Terceira rua do Limão', '450', 'João Pessoa','Brasil'), 'Gerente', '10000.00', tb_obra_de_arte(), 
+(SELECT REF(p) FROM tb_funcionario p WHERE cpf = '326.182.003-00')));
+
+
+--POVOAMENTO DE COMPRADOR
+
+INSERT INTO tb_comprador VALUES(tp_comprador('785.214.448-76', 'Carlito Teves', 'carlito_teves@mail.com', to_date('04/09/1981','dd/mm/yyyy'),tp_fones(tp_fone('89' ,'999850698')), tp_endereco('Avenida José Castro','44','Caruaru', 'Brasil'),tp_dados_bancarios('0025631489-6', '0323')));
+INSERT INTO tb_comprador VALUES(tp_comprador('902.345.278-38', 'Susana de Cássia','susana_cassia@mail.com', to_date('06/03/1972','dd/mm/yyyy'), tp_fones(tp_fone('89' ,'993125564')), tp_endereco('Rua das Laranjeiras', '91', 'Palmares', 'Brasil'),tp_dados_bancarios('2635489654-8', '0323')));
+INSERT INTO tb_comprador VALUES(tp_comprador('183.989.570-50','Ágatha F Azevedo','agatha_azevedo@mail.com', to_date('03/10/1970','dd/mm/yyyy'), tp_fones(tp_fone('89' ,'991244759')), tp_endereco('Rua Acapulco ', '1971', 'Palmares', 'Brasil'),tp_dados_bancarios('1124578965-0', '0323')));
+INSERT INTO tb_comprador VALUES(tp_comprador('201.811.925-78','Marina A Gomes','marina_gomes@mail.com','09-APR-1969', tp_fones(tp_fone('15' ,'992880900')), tp_endereco('Rua Dom Severino Vieira de Melo', '1234', 'Caruaru', 'Brasil'),tp_dados_bancarios('3836701591-1', '0626')));
+INSERT INTO tb_comprador VALUES(tp_comprador('454.187.783-92',' Marcos Júnior Silva','marcos_junior@mail.com','05-SEP-1975', tp_fones(tp_fone('15' ,'975528734')), tp_endereco('Rua do Centro', '87', 'Recife', 'Brasil'),tp_dados_bancarios('05406377-4', '0626')));
+INSERT INTO tb_comprador VALUES(tp_comprador('201.111.904-67','Carlos Justos','carlos_justos@mail.com','07-DEC-2002', tp_fones(tp_fone('15' ,'938426247')), tp_endereco('Travessa da Quinta Avenida', '01', 'Carne de Vaca', 'Brasil'),tp_dados_bancarios('3880411612-2', '0780')));
+INSERT INTO tb_comprador VALUES(tp_comprador('292.957.379-11','Manuela P Lima','manuela_lima@mail.com','05-DEC-1957', tp_fones(tp_fone('15' ,'926284917')), tp_endereco('Rua Ibicuí', '558', 'Caruaru', 'Brasil'),tp_dados_bancarios('1854470959-7', '0780')));
+INSERT INTO tb_comprador VALUES(tp_comprador('586.174.486-15','João Maurício Santos','joao_mauricio@mail.com','07-AUG-1996', tp_fones(tp_fone('15' ,'876557230')), tp_endereco('Avenida José Petribu', '99', 'Vitória de Santo Antão','Brasil'),tp_dados_bancarios('5679564550-9', '0780')));
+INSERT INTO tb_comprador VALUES(tp_comprador('345.780.230-12', 'Ricardo Alves de Almeida','ricardo_almeida@mail.com', to_date('12-SEP-1980','dd/mm/yyyy'),tp_fones(tp_fone(‘81', 912354325)), tp_endereco(Rua marechal oliveira', '125', 'Carne de Vaca', 'Brasil'),tp_dados_bancarios('8899523450-7', 0780)));
+
+
 
