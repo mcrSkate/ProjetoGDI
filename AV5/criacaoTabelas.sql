@@ -198,7 +198,7 @@ CREATE TABLE tb_expoe_reliquia OF tp_expoe_reliquia(
 /
 
 CREATE OR REPLACE TYPE tp_guia AS OBJECT(
-    data_hora DATE,
+    data_hora TIMESTAMP,
     exposicao REF tp_exposicao,
     visitante REF tp_visitante,
     funcionario REF tp_funcionario
