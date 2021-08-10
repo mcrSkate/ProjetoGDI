@@ -93,7 +93,9 @@ CREATE OR REPLACE TYPE tp_artista UNDER tp_pessoa(
 );
 /
 
-CREATE TABLE tb_artista OF tp_artista 
+CREATE TABLE tb_artista OF tp_artista(
+     cpf PRIMARY KEY
+)
 NESTED TABLE lista_obras STORE AS tp_lista_obras;
 /
 
@@ -122,7 +124,9 @@ CREATE OR REPLACE TYPE BODY tp_funcionario AS
 END;
 /
 
-CREATE TABLE tb_funcionario OF tp_funcionario
+CREATE TABLE tb_funcionario OF tp_funcionario(
+	cpf PRIMARY KEY
+)
 NESTED TABLE lista_obras STORE AS tp_lista_obras2;
 /
 
@@ -132,7 +136,9 @@ CREATE OR REPLACE TYPE tp_visitante UNDER tp_pessoa(
 );
 /
 
-CREATE TABLE tb_visitante OF tp_visitante;
+CREATE TABLE tb_visitante OF tp_visitante(
+	cpf PRIMARY KEY
+);
 /
 
 CREATE OR REPLACE TYPE tp_exposicao AS OBJECT(
@@ -218,7 +224,9 @@ CREATE OR REPLACE TYPE tp_comprador UNDER tp_pessoa(
 );
 /
 
-CREATE TABLE tb_comprador OF tp_comprador;
+CREATE TABLE tb_comprador OF tp_comprador(
+	cpf PRIMARY KEY
+);
 /
 
 CREATE OR REPLACE TYPE tp_compra AS OBJECT(
