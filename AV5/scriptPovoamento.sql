@@ -139,5 +139,67 @@ INSERT INTO tb_comprador VALUES(tp_comprador('292.957.379-11','Manuela P Lima','
 INSERT INTO tb_comprador VALUES(tp_comprador('586.174.486-15','João Maurício Santos','joao_mauricio@mail.com','07-AUG-1996', tp_fones(tp_fone('15' ,'876557230')), tp_endereco('Avenida José Petribu', '99', 'Vitória de Santo Antão','Brasil'),tp_dados_bancarios('5679564550-9', '0780')));
 INSERT INTO tb_comprador VALUES(tp_comprador('345.780.230-12', 'Ricardo Alves de Almeida','ricardo_almeida@mail.com', to_date('12-SEP-1980','dd/mm/yyyy'),tp_fones(tp_fone(‘81', 912354325)), tp_endereco(Rua marechal oliveira', '125', 'Carne de Vaca', 'Brasil'),tp_dados_bancarios('8899523450-7', 0780)));
 
+--POVOAMENTO DE EXPOSICAO
+                                
+CREATE SEQUENCE exposicao_cq INCREMENT BY 1 START WITH 1;
 
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 140.00));
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 140.00));
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 200.00));
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 100.00));
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 80.00));
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 240.00));
+INSERT INTO tb_exposicao VALUES (tp_exposicao(exposicao_cq.nextval, 120.00));
+
+--POVOAMENTO DE EXPOE RELIQUIA
+                                
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 1), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,6780);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 3), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,6053);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 4), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,5493);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 8), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,4736);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 9), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,7394);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 10), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 6) ,7902);
+
+
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 2), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,9080);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 5), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,5670);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 6), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,1042);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 7), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,8754);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 11), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,1407);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 12), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7) ,7681);
+
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 13), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 3) ,3456);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 17), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 3) ,1056);
+
+INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.identificador_reliquia = 20), 
+(SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 3) ,7654);
+                                
+                                
 
