@@ -137,7 +137,7 @@ INSERT INTO tb_comprador VALUES(tp_comprador('454.187.783-92',' Marcos Júnior S
 INSERT INTO tb_comprador VALUES(tp_comprador('201.111.904-67','Carlos Justos','carlos_justos@mail.com','07-DEC-2002', tp_fones(tp_fone('15' ,'938426247')), tp_endereco('Travessa da Quinta Avenida', '01', 'Carne de Vaca', 'Brasil'),tp_dados_bancarios('3880411612-2', '0780')));
 INSERT INTO tb_comprador VALUES(tp_comprador('292.957.379-11','Manuela P Lima','manuela_lima@mail.com','05-DEC-1957', tp_fones(tp_fone('15' ,'926284917')), tp_endereco('Rua Ibicuí', '558', 'Caruaru', 'Brasil'),tp_dados_bancarios('1854470959-7', '0780')));
 INSERT INTO tb_comprador VALUES(tp_comprador('586.174.486-15','João Maurício Santos','joao_mauricio@mail.com','07-AUG-1996', tp_fones(tp_fone('15' ,'876557230')), tp_endereco('Avenida José Petribu', '99', 'Vitória de Santo Antão','Brasil'),tp_dados_bancarios('5679564550-9', '0780')));
-INSERT INTO tb_comprador VALUES(tp_comprador('345.780.230-12', 'Ricardo Alves de Almeida','ricardo_almeida@mail.com', to_date('12-SEP-1980','dd/mm/yyyy'),tp_fones(tp_fone(‘81', 912354325)), tp_endereco(Rua marechal oliveira', '125', 'Carne de Vaca', 'Brasil'),tp_dados_bancarios('8899523450-7', 0780)));
+INSERT INTO tb_comprador VALUES(tp_comprador('345.780.230-12', 'Ricardo Alves de Almeida','ricardo_almeida@mail.com', to_date('12-SEP-1980','dd/mm/yyyy'),tp_fones(tp_fone('81', 912354325)), tp_endereco(Rua marechal oliveira', '125', 'Carne de Vaca', 'Brasil'),tp_dados_bancarios('8899523450-7', 0780)));
 
 --POVOAMENTO DE EXPOSICAO
                                 
