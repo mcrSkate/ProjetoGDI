@@ -146,7 +146,7 @@ CREATE OR REPLACE TYPE tp_exposicao AS OBJECT(
     dinheiro_arrecadado NUMERIC,
     numero_visitantes INTEGER,
     
-    CONSTRUCTOR FUNCTION tp_exposicao(identificador_exposicao INTEGER, dinheiro_arrecadado NUMERIC) RETURN SELF AS RESULT
+    CONSTRUCTOR FUNCTION tp_exposicao(identificador_exposicao INTEGER, dinheiro_arrecadado INTEGER) RETURN SELF AS RESULT
     
 );
 /
