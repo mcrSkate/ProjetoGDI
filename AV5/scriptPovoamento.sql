@@ -201,87 +201,87 @@ INSERT INTO tb_expoe_reliquia VALUES((SELECT REF(r) FROM tb_reliquia r WHERE r.i
 --POVOANDO OBRA DE ARTES DOS ARTISTAS
                                 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('25-JAN-2013','Labirinto dos Céus', 'Pintura', 12000.0),
-                                    tp_obra_de_arte('13-JAN-1989','Pensamento de Cézar', 'Escultura', 30000.0))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('102.312.573-45','25-JAN-2013'),'Labirinto dos Céus', 'Pintura', 12000.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('102.312.573-45','13-JAN-1989'),'Pensamento de Cézar', 'Escultura', 30000.0))
 WHERE a.cpf = '102.312.573-45';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('11-MAY-2002','O Pé Grande','Pintura', 4500.00),
-                                    tp_obra_de_arte('15-APR-2021','Escuridão','Pintura', 5600.00))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('564.328.478-98','11-MAY-2002'),'O Pé Grande','Pintura', 4500.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('564.328.478-98','15-APR-2021'),'Escuridão','Pintura', 5600.00))
 WHERE a.cpf = '564.328.478-98';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('19-MAY-2000','O choro','Escultura', 80000.00),
-                                    tp_obra_de_arte('08-APR-1940','A torre de ossos','Escultura', 5300.0))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('689.207.420-42','19-MAY-2000'),'O choro','Escultura', 80000.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('689.207.420-42','08-APR-1940'),'A torre de ossos','Escultura', 5300.0))
 WHERE a.cpf = '689.207.420-42';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('20-FEB-2002','Coraline','Pintura', 200000.0),
-                    tp_obra_de_arte('29-JAN-1954','Morte','Pintura', 20500.0))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('986.124.785-45','20-FEB-2002'),'Coraline','Pintura', 200000.0),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('986.124.785-45','29-JAN-1954'),'Morte','Pintura', 20500.0))
 WHERE a.cpf = '986.124.785-45';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('08-APR-1996','Caminho para o céu','Pintura', 86710.0),
-                    tp_obra_de_arte('13-JUL-1994','Chápeu Amarelo','Escultura', 5000.0))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('198.228.735-87','08-APR-1996'),'Caminho para o céu','Pintura', 86710.0),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('198.228.735-87','13-JUL-1994'),'Chápeu Amarelo','Escultura', 5000.0))
 WHERE a.cpf = '198.228.735-87';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('05-NOV-1966','Torre de babel','Escultura', 18000.00),
-                    tp_obra_de_arte('02-NOV-2001','Estrada de espinhos','Escultura', 126000.00))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('078.845.996-12','05-NOV-1966'),'Torre de babel','Escultura', 18000.00),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('078.845.996-12','02-NOV-2001'),'Estrada de espinhos','Escultura', 126000.00))
 WHERE a.cpf = '078.845.996-12';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('07-APR-2010','Amazônia Azul','Pintura', 56000.00),
-                    tp_obra_de_arte('04-JUL-2021','Lonamisa','Pintura', 7420.00))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('678.191.458-44','07-APR-2010'),'Amazônia Azul','Pintura', 56000.00),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('678.191.458-44','04-JUL-2021'),'Lonamisa','Pintura', 7420.00))
 WHERE a.cpf = '678.191.458-44';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('09-DEC-1983','Rosto sem cores','Pintura', 89000.00),
-                    tp_obra_de_arte('26-JAN-2014','O Banco de Dados','Escultura', 18500.00))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('635.152.669-17','09-DEC-1983'),'Rosto sem cores','Pintura', 89000.00),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('635.152.669-17','26-JAN-2014'),'O Banco de Dados','Escultura', 18500.00))
 WHERE a.cpf = '635.152.669-17';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('09-APR-2015','Sonalima','Pintura', 32000.00 ),
-                    tp_obra_de_arte('21-JUL-1975','Pintura Lendária','Escultura', 100000.00))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('456.712.223-00','09-APR-2015'),'Sonalima','Pintura', 32000.00 ),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('456.712.223-00','21-JUL-1975'),'Pintura Lendária','Escultura', 100000.00))
 WHERE a.cpf = '456.712.223-00';
 
 UPDATE tb_artista a
-SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte('31-DEC-1999','Século Novo','Pintura', 89005.00 ),
-                    tp_obra_de_arte('09-FEB-1982','O limão','Escultura', 90005.00))
+SET a.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('514.378.321-98','31-DEC-1999'),'Século Novo','Pintura', 89005.00 ),
+                    tp_obra_de_arte(tp_obra_de_arte_primary_key('514.378.321-98','09-FEB-1982'),'O limão','Escultura', 90005.00))
 WHERE a.cpf = '514.378.321-98';
                                 
 --POVOANDO OBRAS DE ARTES EM FUNCIONARIOS
 
 UPDATE tb_funcionario f
-SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('25-JAN-2013','Labirinto dos Céus', 'Pintura', 12000.0),
-                                    tp_obra_de_arte('13-JAN-1989','Pensamento de Cézar', 'Escultura', 30000.0),
-                                    tp_obra_de_arte('11-MAY-2002','O Pé Grande','Pintura', 4500.00),
-                                    tp_obra_de_arte('15-APR-2021','Escuridão','Pintura', 5600.00),
-                                    tp_obra_de_arte('19-MAY-2000','O choro','Escultura', 80000.00),
-                                    tp_obra_de_arte('08-APR-1940','A torre de ossos','Escultura', 5300.0),
-                                    tp_obra_de_arte('20-FEB-2002','Coraline','Pintura', 200000.0),
-                                    tp_obra_de_arte('29-JAN-1954','Morte','Pintura', 20500.0),
-                                    tp_obra_de_arte('08-APR-1996','Caminho para o céu','Pintura', 86710.0),
-                                    tp_obra_de_arte('13-JUL-1994','Chápeu Amarelo','Escultura', 5000.0))
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('102.312.573-45','25-JAN-2013'),'Labirinto dos Céus', 'Pintura', 12000.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('102.312.573-45','13-JAN-1989'),'Pensamento de Cézar', 'Escultura', 30000.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('564.328.478-98','11-MAY-2002'),'O Pé Grande','Pintura', 4500.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('564.328.478-98','15-APR-2021'),'Escuridão','Pintura', 5600.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('689.207.420-42','19-MAY-2000'),'O choro','Escultura', 80000.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('689.207.420-42','08-APR-1940'),'A torre de ossos','Escultura', 5300.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('986.124.785-45','20-FEB-2002'),'Coraline','Pintura', 200000.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('986.124.785-45','29-JAN-1954'),'Morte','Pintura', 20500.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('198.228.735-87','08-APR-1996'),'Caminho para o céu','Pintura', 86710.0),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('198.228.735-87','13-JUL-1994'),'Chápeu Amarelo','Escultura', 5000.0))
 WHERE f.cpf = '602.897.321-75';
 
 UPDATE tb_funcionario f
-SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('05-NOV-1966','Torre de babel','Escultura', 18000.00),
-                                    tp_obra_de_arte('02-NOV-2001','Estrada de espinhos','Escultura', 126000.00),
-                                    tp_obra_de_arte('07-APR-2010','Amazônia Azul','Pintura', 56000.00),
-                                    tp_obra_de_arte('04-JUL-2021','Lonamisa','Pintura', 7420.00),
-                                    tp_obra_de_arte('09-DEC-1983','Rosto sem cores','Pintura', 89000.00))
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('078.845.996-12','05-NOV-1966'),'Torre de babel','Escultura', 18000.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('078.845.996-12','02-NOV-2001'),'Estrada de espinhos','Escultura', 126000.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('678.191.458-44','07-APR-2010'),'Amazônia Azul','Pintura', 56000.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('678.191.458-44','04-JUL-2021'),'Lonamisa','Pintura', 7420.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('635.152.669-17','09-DEC-1983'),'Rosto sem cores','Pintura', 89000.00))
 WHERE f.cpf = '573.972.289-18';
 
 UPDATE tb_funcionario f
-SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('26-JAN-2014','O Banco de Dados','Escultura', 18500.00),
-                                    tp_obra_de_arte('09-APR-2015','Sonalima','Pintura', 32000.00),
-                                    tp_obra_de_arte('21-JUL-1975','Pintura Lendária','Escultura', 100000.00))
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('635.152.669-17','26-JAN-2014'),'O Banco de Dados','Escultura', 18500.00),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('456.712.223-00','09-APR-2015'),'Sonalima','Pintura', 32000.00 ),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('456.712.223-00','21-JUL-1975'),'Pintura Lendária','Escultura', 100000.00))
 WHERE f.cpf = '276.787.174-15';
 
 UPDATE tb_funcionario f
-SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte('31-DEC-1999','Século Novo','Pintura', 89005.00),
-                                    tp_obra_de_arte('09-FEB-1982','O limão','Escultura', 90005.00))
+SET f.lista_obras = tb_obra_de_arte(tp_obra_de_arte(tp_obra_de_arte_primary_key('514.378.321-98','31-DEC-1999'),'Século Novo','Pintura', 89005.00 ),
+                                    tp_obra_de_arte(tp_obra_de_arte_primary_key('514.378.321-98','09-FEB-1982'),'O limão','Escultura', 90005.00))
 WHERE f.cpf = '177.235.819-39';
 
 --POVOAMENTO DA TABELA GUIA
@@ -344,6 +344,88 @@ INSERT INTO tb_guia VALUES(tp_guia('04-JAN-2015 8:00:00 PM', (SELECT REF(e) FROM
 INSERT INTO tb_guia VALUES(tp_guia('04-JAN-2015 8:00:00 PM', (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7), (SELECT REF(v) FROM tb_visitante v WHERE v.cpf = '923.084.271-60'), (SELECT REF(f) FROM tb_funcionario f WHERE f.cpf = '112.352.284-68')));
 INSERT INTO tb_guia VALUES(tp_guia('04-JAN-2015 8:00:00 PM', (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 7), (SELECT REF(v) FROM tb_visitante v WHERE v.cpf = '931.071.938-95'), (SELECT REF(f) FROM tb_funcionario f WHERE f.cpf = '321.565.194-71')));
 
+--POVOAMENTO DE EXPOE OBRA DE ARTE
+
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key( '078.845.996-12', '05-NOV-1966'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 1), 7406);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('102.312.573-45', '25-JAN-2013'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 1), 3303);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('198.228.735-87', '08-APR-1996'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 1),  4403);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('456.712.223-00', '09-APR-2015'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 1),   5237);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key( '078.845.996-12',  '02-NOV-2001'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =2), 4113);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key( '102.312.573-45',   '13-JAN-1989'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =2),7435);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key(  '198.228.735-87', '13-SEP-1994'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =2),2641);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('456.712.223-00','21-SEP-1975'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =2),3841);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('689.207.420-42','19-MAY-2000'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =3),7251);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key( '689.207.420-42','08-APR-1940'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =3),7002);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('678.191.458-44','07-APR-2010'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =3), 8721);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('678.191.458-44','04-SEP-2021'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao =3), 0831);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('514.378.321-98','31-DEC-1999'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 4), 9645);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('514.378.321-98','09-FEB-1982'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 4), 1036);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('635.152.669-17', '09-DEC-1983'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 4),2336);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('564.328.478-98', '11-MAY-2002'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 4),9745);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('635.152.669-17', '26-JAN-2014'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 5), 6666);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('564.328.478-98', '15-APR-2021'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 5), 1014);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('986.124.785-45', '20-FEB-2002'), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 5), 5060);
+INSERT INTO tb_expoe_obra_de_arte VALUES(tp_obra_de_arte_primary_key('986.124.785-45',to_date('28/01/1954','dd/mm/yyyy')), (SELECT REF(e) FROM tb_exposicao e WHERE e.identificador_exposicao = 5), 3080);
+
+
+
+--POVOAMENTO COMPRA
+
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '785.214.448-76'), tp_obra_de_arte_primary_key('102.312.573-45', '13-JAN-1989'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '785.214.448-76'), tp_obra_de_arte_primary_key('986.124.785-45','20-FEB-2002'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '785.214.448-76'), tp_obra_de_arte_primary_key('635.152.669-17','09-DEC-1983'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '902.345.278-38'), tp_obra_de_arte_primary_key('689.207.420-42','19-MAY-2000'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '902.345.278-38'), tp_obra_de_arte_primary_key('456.712.223-00','21-JUL-1975'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '183.989.570-50'), tp_obra_de_arte_primary_key('078.845.996-12','02-NOV-2001'));
+
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '201.811.925-78'), tp_obra_de_arte_primary_key('102.312.573-45', '25-JAN-2013'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '201.811.925-78'), tp_obra_de_arte_primary_key('564.328.478-98', '15-APR-2021'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '201.811.925-78'), tp_obra_de_arte_primary_key('635.152.669-17', '26-JAN-2014'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '454.187.783-92'), tp_obra_de_arte_primary_key('564.328.478-98', '11-MAY-2002'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '454.187.783-92'), tp_obra_de_arte_primary_key('514.378.321-98', '31-DEC-1999'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '201.111.904-67'), tp_obra_de_arte_primary_key('678.191.458-44', '07-APR-2010'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '201.111.904-67'), tp_obra_de_arte_primary_key('689.207.420-42', '08-APR-1940'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '292.957.379-11'), tp_obra_de_arte_primary_key('078.845.996-12', '05-NOV-1966'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '292.957.379-11'), tp_obra_de_arte_primary_key('678.191.458-44', '04-JUL-2021'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '586.174.486-15'), tp_obra_de_arte_primary_key('986.124.785-45', '29-JAN-1954'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '345.780.230-12'), tp_obra_de_arte_primary_key('198.228.735-87', '08-APR-1996'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '345.780.230-12'), tp_obra_de_arte_primary_key('198.228.735-87', '13-JUL-1994'));
+INSERT INTO tb_compra VALUES ((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '345.780.230-12'), tp_obra_de_arte_primary_key('456.712.223-00', '09-APR-2015'));
+
+--POVOAMENTO DE SEGURO
+
+INSERT INTO tb_seguro VALUES( 1, 600.00, tp_nt_compra());
+INSERT INTO tb_seguro VALUES( 2, 1600.00, tp_nt_compra());
+INSERT INTO tb_seguro VALUES( 3, 4000.00, tp_nt_compra());
+INSERT INTO tb_seguro VALUES( 4, 2520.00, tp_nt_compra());
+INSERT INTO tb_seguro VALUES( 5, 1780.00, tp_nt_compra());
+INSERT INTO tb_seguro VALUES( 6, 2000.00, tp_nt_compra());
+
+--POVOANDO COMPRAS DE SEGURO
+
+UPDATE tb_seguro S
+SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '785.214.448-76'), tp_obra_de_arte_primary_key('102.312.573-45', '13-JAN-1989')))
+WHERE S.identificador_seguro = 1;   
+
+UPDATE tb_seguro S
+SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '785.214.448-76'), tp_obra_de_arte_primary_key('986.124.785-45','20-FEB-2002')))
+WHERE S.identificador_seguro = 5;   
+
+
+UPDATE tb_seguro S
+SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '785.214.448-76'), tp_obra_de_arte_primary_key('635.152.669-17','09-DEC-1983')))
+WHERE S.identificador_seguro = 3;   
+UPDATE tb_seguro S
+SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '902.345.278-38'), tp_obra_de_arte_primary_key('689.207.420-42','19-MAY-2000')))
+WHERE S.identificador_seguro = 2;   
+
+UPDATE tb_seguro S
+SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '902.345.278-38'), tp_obra_de_arte_primary_key('456.712.223-00','21-JUL-1975')))
+WHERE S.identificador_seguro = 6;   
+
+UPDATE tb_seguro S
+SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c WHERE c.cpf = '183.989.570-50'), tp_obra_de_arte_primary_key('078.845.996-12','02-NOV-2001')))
+WHERE S.identificador_seguro = 4;   
 
 
 
