@@ -241,22 +241,25 @@ CREATE OR REPLACE TYPE tp_compra AS OBJECT(
 );
 /
 
-CREATE OR REPLACE TYPE tb_compra IS TABLE OF tp_compra;
+
+CREATE OR REPLACE TYPE tp_nt_compra IS TABLE OF tp_compra;
 /
+
+CREATE TABLE tb_compra OF tp_compra;
     
 CREATE OR REPLACE TYPE tp_seguro AS OBJECT(
     identificador_seguro INTEGER,
-    mensalidade NUMBER,
-    lista_compra tb_compra,
+    mensalidade NUMERIC,
+    lista_compra tp_nt_compra,
     
-    MEMBER FUNCTION mensalidadeAnual RETURN NUMBER
+    MEMBER FUNCTION pagamentoAnual RETURN NUMERIC
 );
 /
 
 CREATE OR REPLACE TYPE BODY tp_seguro AS
-   MEMBER FUNCTION mensalidadeAnual RETURN NUMBER IS
+    MEMBER FUNCTION pagamentoAnual RETURN NUMERIC IS
     BEGIN
-        RETURN mensalidade*12;
+        RETURN SELF.mensalidade*12;
     END;
 END;
 /
@@ -267,3 +270,6 @@ CREATE TABLE tb_seguro OF tp_seguro (
 )
 NESTED TABLE lista_compra STORE AS tb_lista_compras;
 /
+
+
+
