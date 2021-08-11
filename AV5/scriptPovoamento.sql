@@ -428,6 +428,14 @@ SET S.lista_compra = tp_nt_compra(tp_compra((SELECT REF(c) FROM tb_comprador c W
 WHERE S.identificador_seguro = 4;   
 
 
+DECLARE
 
+reliquiaTeste tp_reliquia;
+
+BEGIN
+    SELECT VALUE(r) INTO reliquiaTeste FROM tb_reliquia r WHERE r.identificador_reliquia = 6;
+    reliquiaTeste.exibirDetalhes();
+END;
+/
 
 
