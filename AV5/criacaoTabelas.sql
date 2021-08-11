@@ -10,7 +10,7 @@ CREATE OR REPLACE TYPE tp_reliquia AS OBJECT(
 
 CREATE OR REPLACE TYPE BODY tp_reliquia AS
 
-    ORDER MEMBER FUNCTION comparaIdade (x INTEGER) RETURN INTEGER AS
+    ORDER MEMBER FUNCTION comparaIdade (x tp_reliquia) RETURN INTEGER AS
     BEGIN
         RETURN SELF.idade_estimada - x.idade_estimada;    
     END;
