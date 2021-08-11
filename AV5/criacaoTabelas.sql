@@ -52,7 +52,7 @@ CREATE OR REPLACE TYPE tp_pessoa AS OBJECT(
     fones tp_fones,
     endereco tp_endereco,
     
-FINAL MAP MEMBER FUNCTION idade RETURN NUMBER,
+FINAL MAP MEMBER FUNCTION pessoaToString RETURN VARCHAR,
 
 MEMBER FUNCTION contatoEletronico RETURN VARCHAR
 
@@ -62,9 +62,10 @@ MEMBER FUNCTION contatoEletronico RETURN VARCHAR
 
 CREATE OR REPLACE TYPE BODY tp_pessoa AS
 
-FINAL MAP MEMBER FUNCTION idade RETURN NUMBER IS
+FINAL MAP MEMBER FUNCTION pessoaToString RETURN VARCHAR IS
+    p VARCHAR(50) := nome_pessoa;
 BEGIN
-	RETURN TRUNC(MONTHS_BETWEEN(SYSDATE, SELF.data_nascimento))/12);
+    return p;
 END;
 
 MEMBER FUNCTION contatoEletronico RETURN VARCHAR IS
@@ -76,8 +77,14 @@ END;
 /
 
 
+CREATE OR REPLACE TYPE tp_obra_de_arte_primary_key AS OBJECT(
+    artista_cpf VARCHAR(15),
+    data_de_criacao DATE
+);
+/
+
 CREATE OR REPLACE TYPE tp_obra_de_arte AS OBJECT (
-    data_de_criacao DATE,
+    obra_de_arte_primary_key tp_obra_de_arte_primary_key,
     nome_obra VARCHAR(50),
     categoria VARCHAR(20),
     valor NUMBER
@@ -147,7 +154,6 @@ CREATE OR REPLACE TYPE tp_exposicao AS OBJECT(
     numero_visitantes INTEGER,
     
     CONSTRUCTOR FUNCTION tp_exposicao(identificador_exposicao INTEGER, dinheiro_arrecadado INTEGER) RETURN SELF AS RESULT
-    
 );
 /
 
@@ -172,7 +178,7 @@ CREATE TABLE tb_exposicao OF tp_exposicao (
 /
 
 CREATE OR REPLACE TYPE tp_expoe_obra_de_arte AS OBJECT(
-    obra_de_arte REF tp_obra_de_arte,
+    obra_de_arte tp_obra_de_arte_primary_key,
     exposicao REF tp_exposicao,
     numero_protocolo_confirmacao NUMERIC
 );
@@ -231,7 +237,7 @@ CREATE TABLE tb_comprador OF tp_comprador(
 
 CREATE OR REPLACE TYPE tp_compra AS OBJECT(
     comprador REF tp_comprador,
-    obras_compradas REF tp_obra_de_arte
+    obras_compradas tp_obra_de_arte_primary_key
 );
 /
 
@@ -240,17 +246,17 @@ CREATE OR REPLACE TYPE tb_compra IS TABLE OF tp_compra;
     
 CREATE OR REPLACE TYPE tp_seguro AS OBJECT(
     identificador_seguro INTEGER,
-    mensalidade NUMERIC,
+    mensalidade NUMBER,
     lista_compra tb_compra,
     
-    MEMBER FUNCTION pagamentoAnual RETURN NUMERIC
+    MEMBER FUNCTION mensalidadeAnual RETURN NUMBER
 );
 /
 
 CREATE OR REPLACE TYPE BODY tp_seguro AS OBJECT(
-    MEMBER FUNCTION pagamentoAnual RETURN NUMERIC IS
+   MEMBER FUNCTION mensalidadeAnual RETURN NUMBER IS
     BEGIN
-        RETURN SELF.mensalidade*12;
+        RETURN mensalidade*12;
     END;
 END;
 );
@@ -262,8 +268,3 @@ CREATE TABLE tb_seguro OF tp_seguro (
 )
 NESTED TABLE lista_compra STORE AS tb_lista_compras;
 /
-
-
-
-
-
