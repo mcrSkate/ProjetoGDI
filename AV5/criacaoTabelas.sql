@@ -1,20 +1,31 @@
-CREATE OR REPLACE TYPE tp_reliquia AS OBJECT(
-    identificador_reliquia INTEGER,
-    nome_reliquia VARCHAR(50),
-    categoria_reliquia VARCHAR(30),
-    idade_estimada INTEGER,
-    
-    ORDER MEMBER FUNCTION comparaIdade (x tp_reliquia) RETURN INTEGER
-);
+CREATE OR REPLACE TYPE tp_reliquia AS OBJECT( 
+    identificador_reliquia INTEGER, 
+    nome_reliquia VARCHAR(50), 
+    categoria_reliquia VARCHAR(30), 
+    idade_estimada INTEGER, 
+
+    ORDER MEMBER FUNCTION comparaIdade (x tp_reliquia) RETURN INTEGER, 
+
+    MEMBER PROCEDURE exibirDetalhes (SELF tp_reliquia)
+); 
 /
 
-CREATE OR REPLACE TYPE BODY tp_reliquia AS
-
-    ORDER MEMBER FUNCTION comparaIdade (x tp_reliquia) RETURN INTEGER AS
-    BEGIN
-        RETURN SELF.idade_estimada - x.idade_estimada;    
+CREATE OR REPLACE TYPE BODY tp_reliquia AS 
+ 
+    ORDER MEMBER FUNCTION comparaIdade (x tp_reliquia) RETURN INTEGER AS 
+    BEGIN 
+        RETURN SELF.idade_estimada - x.idade_estimada;
     END;
-    
+
+    MEMBER PROCEDURE exibirDetalhes (SELF tp_reliquia) IS
+    BEGIN
+        DBMS_OUTPUT.PUT_LINE('Detalhes da relíquia');
+        DBMS_OUTPUT.PUT_LINE('Nome: ' || nome_reliquia);
+        DBMS_OUTPUT.PUT_LINE('Identificador: ' ||  TO_CHAR(identificador_reliquia));
+        DBMS_OUTPUT.PUT_LINE('Categoria: ' || categoria_reliquia);
+        DBMS_OUTPUT.PUT_LINE('Idade estimada: ' || TO_CHAR(idade_estimada));
+    END;
+
 END;
 /
 
