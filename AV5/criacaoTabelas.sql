@@ -253,13 +253,12 @@ CREATE OR REPLACE TYPE tp_seguro AS OBJECT(
 );
 /
 
-CREATE OR REPLACE TYPE BODY tp_seguro AS OBJECT(
+CREATE OR REPLACE TYPE BODY tp_seguro AS
    MEMBER FUNCTION mensalidadeAnual RETURN NUMBER IS
     BEGIN
         RETURN mensalidade*12;
     END;
 END;
-);
 /
 
 CREATE TABLE tb_seguro OF tp_seguro (
