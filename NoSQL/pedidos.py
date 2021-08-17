@@ -1,0 +1,252 @@
+lista_pedidos = [
+    {
+        "cliente": "Manuela A Cunha",
+        "restaurante": "Casa do Bolo",
+        "comida": "Bolo de Casamento",
+        "forma de pagamento": "Débito",
+        "valor total": 320.00,
+        "data e hora": "17/08/20 15:44",
+        "observações": "Coloque a minha foto no bolo",
+        "entregador": "Samuel Fernando Cauã Drumond",
+        "taxa de entrega": 16.00,
+        "tempo total em minutos": 186
+    },
+    {
+        "cliente": "Guilherme P Lima",
+        "restaurante": "Casa do Bolo",
+        "comida": ["Torta Holandesa", "Bolo de Rolo"],
+        "forma de pagamento": "Dinheiro",
+        "valor total": 120.00,
+        "data e hora": "20/04/21 10:21",
+        "entregador": "Júlia A Almeida",
+        "taxa de entrega": 6.00,
+        "tempo total em minutos": 121
+    },
+    {
+        "cliente": "Pamella Pryscilla Vaz",
+        "restaurante": "Casa do Bolo",
+        "comida": ["Bolo de Fubá", "Bolo de Rolo"],
+        "forma de pagamento": "Crédito",
+        "valor total": 100.00,
+        "data e hora": "03/06/21 15:32",
+        "observações": "Sem açúcar por favor",
+        "entregador": "Marcos Carlos Eduardo de Paula",
+        "taxa de entrega": 10.00,
+        "tempo total em minutos": 161
+    },
+    {
+        "cliente": "Alcinda de Barros Nascimento",
+        "forma de pagamento": "Dinheiro",
+        "valor total": 83.82,
+        "restaurante": "Pizzaria P",
+        "comida": ["Pizza de Brigadeiro"],
+        "data e hora":"25/08/2020 18:36",
+        "observações":"aumentar quantidade de brigadeiro",
+        "entregador": "Camila Lara Tatiane da Luz",
+        "taxa de entrega": 8.00,
+        "tempo total em minutos": 155
+    },
+    {
+        "cliente": "Edson Gustavo Bento Barros",
+        "restaurante": " Cuscuz Nordestino",
+        "comida": ["Cuscuz lampião", "Cuscuz de camarão"],
+        "forma de pagamento": "Débito",
+        "valor total": 30.00,
+        "data e hora": "21/07/2021 14:36",
+        "observações": "Sem tomate",
+        "entregador": "Júlia A Almeida",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 179
+    },
+    {
+        "cliente": "Marcelo Monte",
+        "forma de pagamento": "Débito",
+        "valor total": 41.85,
+        "restaurante": "Pizzaria P",
+        "comida": ["Pizza de Calabresa", "Nachos de queijo"],
+        "data e hora":"28/06/2021 13:47",
+        "entregador": "Marta Rodrigues Mendonça",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 138
+    },
+    {
+        "cliente": "Pamella Pryscilla Vaz",
+        "restaurante": " Sushi Mania",
+        "comida": ["Bolinhos de Salmão", "Bastão romeu e julieta", "Hot Cartol"],
+        "forma de pagamento": "Crédito",
+        "valor total": 52.99,
+        "data e hora": "14/06/2021 18:35",
+        "observações": "Com molho por favor",
+        "entregador": "Camila Lara Tatiane da Luz",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 105
+    },
+    {
+        "cliente": "Antonio Lorenzo Renato Cavalcanti",
+        "restaurante": "Cuscuz Nordestino",
+        "comida": ["Cuscuz raiz", "Cuscuz Maria bonita"],
+        "forma de pagamento": "Dinheiro",
+        "valor total": 24.90,
+        "data e hora": "01/01/2020 08:00",
+        "observações": "Pedido entregue sem atrasos",
+        "entregador": "Marta Rodrigues Mendonça",
+        "taxa de entrega": 10.00,
+        "tempo total em minutos": 57
+    },
+
+    {
+        "cliente": "Giovana C Rodrigues",
+        "restaurante": "Cuscuz Nordestino",
+        "comida": "Cuscuz raiz",
+        "forma de pagamento": "Crédito",
+        "valor total": 11.00,
+        "data e hora": "05/05/2020 15:00",
+        "entregador": "Marcos Carlos Eduardo de Paula",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 142
+    },
+
+    {
+        "cliente": "Guilherme Ian Monteiro",
+        "restaurante": "Cuscuz Nordestino",
+        "comida": ["Cuscuz raiz", "Cuscuz lampião"],
+        "forma de pagamento": "Dinheiro",
+        "valor total": 27.00,
+        "data e hora": "07/05/2020 18:00",
+        "entregador": "Hadassa Juliana da Cunha",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 167
+    },
+    {
+        "cliente": "Carlos José da Rocha",
+        "restaurante": "Cuscuz Nordestino",
+        "comida": "Cuscuz de camarão",
+        "forma de pagamento": "Débito",
+        "valor total": 14.00,
+        "data e hora": "01/01/2020 10:00",
+        "entregador": "Fernando Caio Raimundo da Paz",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 132
+    },
+    {
+        "cliente": "Antonio Lorenzo Renato Cavalcanti",
+        "restaurante": "Hamburgueria do Bob",
+        "comida": ["X-Picanha", "X-Queijo", "X-Frango"],
+        "forma de pagamento": "Crédito",
+        "valor total": 212.00,
+        "data e hora": "12/01/2021 20:21",
+        "observações": "Sem picles no X-Picanha",
+        "entregador": "Hadassa Juliana da Cunha",
+        "taxa de entrega": 20.00,
+        "tempo total em minutos": 212
+    },
+    {
+        "cliente": "Miguel Gomes de Lima",
+        "forma de pagamento": "Dinheiro",
+        "valor total": 112.67,
+        "restaurante": "Pizzaria P",
+        "comida": ["Pizza de Brigadeiro", "Pizza de Calabresa"],
+        "data e hora":"09/08/2021 19:00",
+        "observacoes":" poção extra de calabresa",
+        "entregador": "Fernando Caio Raimundo da Paz",
+        "taxa de entrega": 11.00,
+        "tempo total em minutos": 110
+    },
+    {
+        "cliente": "Carlos José da Rocha",
+        "restaurante": "Hamburgueria do Bob",
+        "comida": ["X-Tudo", "X-Veggie"],
+        "valor total": 100.00,
+        "data e hora": "10/10/2019 21:12",
+        "entregador": "Júlia A Almeida",
+        "taxa de entrega": 10.00,
+        "tempo total em minutos": 108
+    },
+    {
+        "cliente": "Carlos José da Rocha",
+        "restaurante": "Hamburgueria do Bob",
+        "comida": ["X-Veggie"],
+        "valor total": 45.00,
+        "data e hora": "12/10/2019 20:12",
+        "entregador": "Marcos Carlos Eduardo de Paula",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 131
+    },
+    {
+        "cliente": "Miguel Gomes de Lima",
+        "restaurante": "Sushi Mania",
+        "comida": ["Hot Cartola", "Bolinhos de Salmão"],
+        "forma de pagamento": "Débito",
+        "valor total": 34.00,
+        "data e hora": "07/04/2021 17:00",
+        "entregador": "Camila Lara Tatiane da Luz",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 112
+    },
+    {
+        "cliente": "Miguel Gomes de Lima",
+        "restaurante": "Sushi Mania",
+        "comida": ["Hot Cartola", "Uramaki Kani", "Ebi Kani queijo"],
+        "forma de pagamento": "Crédito",
+        "valor total": 56.00,
+        "data e hora": "20/07/2021 20:00",
+        "entregador": "Marcos Carlos Eduardo de Paula",
+        "taxa de entrega": 6.00,
+        "tempo total em minutos": 103
+    },
+    {
+        "cliente": "Alcinda de Barros Nascimento",
+        "restaurante": "Temakeria Temari",
+        "comida": ["Temaki Hot Salmão", "Temaki Shrimp"],
+        "forma de pagamento": "Débito",
+        "valor total": 34.0,
+        "data e hora": "11/02/2021 12:35",
+        "entregador": "Fernando Caio Raimundo da Paz",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 180
+    },
+    {
+        "cliente": "Guilherme Ian Monteiro",
+        "restaurante": "Temakeria Temari",
+        "comida": ["Temaki Hot Salmão", "Temaki Atum", "Temaki Frango Empanado"],
+        "forma de pagamento": "Dinheiro",
+        "valor total": 51.0,
+        "data e hora": "18/06/2021 18:35",
+        "entregador": "Samuel Fernando Cauã Drumond",
+        "taxa de entrega": 6.00,
+        "tempo total em minutos": 144
+    },
+    {
+        "cliente": "César Luiz Lucca Rocha",
+        "restaurante": "Temakeria Temari",
+        "comida": ["Temaki Veggie", "Temaki Frango Empanado"],
+        "forma de pagamento": "Dinheiro",
+        "valor total": 42.0,
+        "data e hora": "19/09/2021 22:10",
+        "entregador": "Fernando Caio Raimundo da Paz",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 191
+    },
+    {
+        "cliente": "Antonio Lorenzo Renato Cavalcanti",
+        "restaurante": "Temakeria Temari",
+        "comida": ["Temaki Veggie", "Temaki Veggie"],
+        "forma de pagamento": "Crédito",
+        "valor total": 44.0,
+        "data e hora": "30/01/2021 08:55",
+        "entregador": "Camila Lara Tatiane da Luz",
+        "taxa de entrega": 5.00,
+        "tempo total em minutos": 104
+    },
+    {
+        "cliente": "Pamella Pryscilla Vaz",
+        "forma de pagamento": "Débito",
+        "valor total": 56.00,
+        "restaurante": "Doceria da Jú",
+        "comida": ["Bolo Chiffon", "Surpresa de Uva", "Surpresa de Uva", "Surpresa de Uva"],
+        "data e hora":"15/04/2021 19:48",
+        "entregador": "Marcos Carlos Eduardo de Paula",
+        "taxa de entrega": 6.00,
+        "tempo total em minutos": 159
+    }
+]
