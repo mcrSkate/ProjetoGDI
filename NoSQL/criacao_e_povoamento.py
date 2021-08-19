@@ -31,3 +31,4 @@ restaurantes.insert_many(lista_restaurantes)
 entregadores.insert_many(lista_entregadores)
 pedidos.insert_many(lista_pedidos)
 avaliacoes.insert_many(lista_avaliacoes)
+
