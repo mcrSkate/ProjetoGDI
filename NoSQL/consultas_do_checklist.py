@@ -5,6 +5,7 @@ from criacao_e_povoamento import restaurantes
 from criacao_e_povoamento import entregadores
 from criacao_e_povoamento import pedidos
 from criacao_e_povoamento import avaliacoes
+from criacao_e_povoamento import comidas
 
 
 print('------------------------------------------')
@@ -51,6 +52,66 @@ for entrega in pedidos.aggregate([{'$match': { 'entregador' : 'Marcos Carlos Edu
     print(entrega)
 
 print('------------------------------------------')
-print('Nome do restaurante que tem a comida mais cara')
+print('Comida mais cara de cada restaurante')
 #max
-for restaurante in restaurante.
+for comida in comidas.aggregate([{ '$group': { '_id': '$restaurante', 'maior valor': {'$max' : '$preco'}}}]):
+    print(comida)
+
+
+print('------------------------------------------')
+print('Média da taxa de entrega de cada restaurante')
+#avg
+for pedido in pedidos.aggregate([{ '$group': { '_id': '$restaurante', 'Média da taxa de entrega': {'$avg' : '$taxa de entrega'}}}]):
+    print(pedido)
+
+print('------------------------------------------')
+print('Lista dos pedidos que não tiveram observações')
+#exists, sort
+for pedido in pedidos.find({'observações':{'$exists': False} }).sort('restaurante'):
+    print('Restaurante:',pedido['restaurante'],'; Cliente:',pedido['cliente'])
+
+
+print('------------------------------------------')
+print('Entregadores ordenados pelo nome')
+#sort
+for entregador in entregadores.find().sort('nome'):
+    print(entregador['nome'])
+
+print('------------------------------------------')
+print('Mostrando as 5 primeiras notas das avaliações')
+#limit
+for avaliacao in avaliacoes.find().limit(5):
+    print(avaliacao['nota'], avaliacao['descricao'])
+
+print('------------------------------------------')
+print('Mostrando as pessoas que tem 3 nomes')
+#$where, function
+for cliente in clientes.find({"$where": """var tem3Nomes = function (nome) {
+    var nomes = nome.split(' ')
+    return nomes.length === 3
+};
+
+return tem3Nomes(this['nome'])"""}):
+    print(cliente['nome'])
+
+print('------------------------------------------')
+print('Mostrando a quantidade de comidas por restaurantes utilziando o mapreduce')
+#mapreduce
+resultados = comidas.map_reduce(
+    """
+        function map() {
+            emit(this['restaurante'], 1)
+        }
+    """,
+    """
+        function reduce(key, values) {
+            var total = 0;
+            for (var i = 0; i < values.length; i++) {
+                total += values[i];
+            }
+            return total;
+        }
+    """, "myresults")
+for restaurante in resultados.find():
+    print(restaurante)
+

@@ -147,7 +147,7 @@ lista_pedidos = [
         "restaurante": "Pizzaria P",
         "comida": ["Pizza de Brigadeiro", "Pizza de Calabresa"],
         "data e hora":"09/08/2021 19:00",
-        "observacoes":" poção extra de calabresa",
+        "observações":" poção extra de calabresa",
         "entregador": "Fernando Caio Raimundo da Paz",
         "taxa de entrega": 11.00,
         "tempo total em minutos": 110
