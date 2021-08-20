@@ -8,6 +8,7 @@ from pedidos import lista_pedidos
 from avaliacoes import lista_avaliacoes
 
 
+
 myclient = pymongo.MongoClient("mongodb://localhost:27017/")
 
 # Criando o banco de dados

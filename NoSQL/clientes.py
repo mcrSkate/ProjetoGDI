@@ -2,7 +2,7 @@ lista_clientes = [
     {
         "nome": "Alcinda de Barros Nascimento",
         "cpf": "109-658-444-22",
-        "endereço": {
+        "endereco": {
             "cep": "55810-000",
             "rua": "Avenida José Bonifácio",
             "numero": "44",
@@ -16,7 +16,7 @@ lista_clientes = [
     {
         "nome": "Thiago A Ribeiro",
         "cpf": "116.084.615-48",
-        "endereço": {
+        "endereco": {
             "cep": "96208-100",
             "rua": "Rua Vereador Athaydes Rodrigues",
             "numero": "17121",
@@ -44,7 +44,7 @@ lista_clientes = [
     {
         "nome": "Marcelo Monte",
         "cpf": "465.897.125-78",
-        "endereço": {
+        "endereco": {
             "cep": "54471-45",
             "rua": "Rua Oliveira de Souza",
             "numero": "15",
@@ -70,7 +70,7 @@ lista_clientes = [
     {
         "nome": "Carlos José da Rocha",
         "cpf": "236.412.335-88",
-        "endereço": {
+        "endereco": {
             "cep": "74332-98",
             "rua": "Fazenda Apuí",
             "cidade": "Macaparana",
@@ -137,7 +137,7 @@ lista_clientes = [
     {
         "cpf": "789.452.132-14",
         "nome": "Miguel Gomes de Lima",
-        "endereço": {
+        "endereco": {
             "cep": "55810-000",
             " complemento": "Esquina do sinal",
             "rua": "Rua Floriano Peixoto",
@@ -179,7 +179,7 @@ lista_clientes = [
     {
         "nome": "Pamella Pryscilla Vaz",
         "cpf": "540.777.666-74",
-        "endereço": {
+        "endereco": {
             "cep": "51021-150",
             "rua": "Rua Amálio Bernardino de Souza",
             "numero": "215",
